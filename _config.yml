@@ -2,19 +2,13 @@
 title: Christopher Becom
 email: youremailaddress@gmail.com
 description: Lead / Senior Mobile Engineer
-baseurl: "/"
 url: "https://cnbecom.github.io"
 
 # Social settings
 500px_url:
 facebook_url: https://facebook.com/cnbecom
 github_url: https://github.com/cnbecom
-gitlab_url: 
-googleplus_url: 
-instagram_url: 
 linkedin_url: https://www.linkedin.com/cnbecom
-pinterest_url:
-slack_url:
 twitter_url: https://twitter.com/cnbecom
 
 # Build settings
