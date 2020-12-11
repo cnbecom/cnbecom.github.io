@@ -6,6 +6,6 @@ layout: default
 
 I am a Lead / Senior Mobile Software Engineer.
 
-[Click here to see my portfolio](./portfolio/index.html) (requires password)
+[Click here to see my resume and portfolio](./portfolio/index.html) (requires password)
 
 Feel free to email me personally at cnbecom (at) gmail (dot) com with any questions or follow ups.
