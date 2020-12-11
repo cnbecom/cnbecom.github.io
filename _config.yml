@@ -6,5 +6,5 @@ theme: jekyll-theme-minimal
 show_downloads: false
 show_twitter: true
 show_linkedin: true
-show_angelco: true 
-show_stackoverflow: true
+show_angelco: false 
+show_stackoverflow: false
