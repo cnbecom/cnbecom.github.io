@@ -19,27 +19,15 @@ Feel free to email me at cnbecom (at) gmail (dot) com.
 ----
 
 ## Tech Stack
-
-**Languages** — Objective-C, Objective-C++, Swift, C++
-
-**Design Patterns** — MVC, MVVM, Coordinator, Finite State Machine, Singleton, Observable-based, Modular Architecture (SPM)
-
-**iOS Frameworks** — UIKit, Core Animation, Core Data, Core Bluetooth, Core Location, ARKit, AVFoundation, Core Audio, Core Graphics
-
-**Concurrency & Reactive** — Swift Concurrency (Async/Await, Actors), Combine, RxSwift
-
-**Integrations** — Persistent Storage, Push Notifications, Custom UI, Animations, Adaptable Layouts, Security (Keychain, Privacy Manifests)
-
-**Backend Integration** — Firebase, AWS, Custom REST-based Services
-
-**Benchmarking / Performance** — Xcode Instruments, Crashlytics, Fabric Answers, XCTest
-
-**CI/CD** — Horde/Swarm, Jenkins, TeamCity, GitHub Actions, CircleCI, Xcodebuild Tools
-
-**Deployment** — MS App Center, Enterprise Solutions, Apple App Store Connect, XCFramework Distribution, Swift Package Manager
-
-**Monitoring / Debugging** — Sentry, Grafana, Postman, Charles Proxy, Splunk, LaunchDarkly
-
-**Methodologies** — Kanban, Scrum with daily stand-ups, sprint presentations, and postmortems
-
-**Working Knowledge / Exposure** — SwiftUI, Kotlin, Kotlin Multiplatform, Unreal Engine C++, C#, XML Build Graphs, Python, Java, Android, JavaScript, Ethereum, IoT, Raspberry Pi, Google Glass, iBeacons
+- **Languages:** Objective-C, Objective-C++, Swift, C++
+- **Design Patterns:** MVC, MVVM, Coordinator, Finite State Machine, Singleton, Observable-based, Modular Architecture (SPM)
+- **iOS Frameworks:** UIKit, Core Animation, Core Data, Core Bluetooth, Core Location, ARKit, AVFoundation, Core Audio, Core Graphics
+- **Concurrency & Reactive:** Swift Concurrency (Async/Await, Actors), Combine, RxSwift
+- **Integrations:** Persistent Storage, Push Notifications, Custom UI, Animations, Adaptable Layouts, Security (Keychain, Privacy Manifests)
+- **Backend Integration:** Firebase, AWS, Custom REST-based Services
+- **Benchmarking / Performance:** Xcode Instruments, Crashlytics, Fabric Answers, XCTest
+- **CI/CD:** Horde/Swarm, Jenkins, TeamCity, GitHub Actions, CircleCI, Xcodebuild Tools
+- **Deployment:** MS App Center, Enterprise Solutions, Apple App Store Connect, XCFramework Distribution, Swift Package Manager
+- **Monitoring / Debugging:** Sentry, Grafana, Postman, Charles Proxy, Splunk, LaunchDarkly
+- **Methodologies:** Kanban, Scrum with daily stand-ups, sprint presentations, and postmortems
+- **Working Knowledge / Exposure:** SwiftUI, Kotlin, Kotlin Multiplatform, Unreal Engine C++, C#, XML Build Graphs, Python, Java, Android, JavaScript, Ethereum, IoT, Raspberry Pi, Google Glass, iBeacons
