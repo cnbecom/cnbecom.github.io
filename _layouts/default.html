@@ -1,81 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17211f;
+        --muted: #5a6863;
+        --line: #d8dfdc;
+        --paper: #fbfbf8;
+        --accent: #0b6b61;
+        --accent-2: #b14c2f;
+        --wash: #eef4f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(100%, 1040px);
+        margin: 0 auto;
+        padding: 56px 24px 72px;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 32px;
+      }
+
+      .eyebrow {
+        color: var(--accent-2);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(2.45rem, 6vw, 4.6rem);
+        line-height: 1;
+        margin: 0;
+        max-width: 860px;
+      }
+
+      .lede {
+        color: var(--muted);
+        font-size: 1.2rem;
+        margin: 24px 0 0;
+        max-width: 760px;
+      }
+
+      .summary-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 34px 0 0;
+      }
+
+      .summary {
+        border-top: 3px solid var(--accent);
+        padding-top: 14px;
+      }
+
+      .summary h2 {
+        font-size: 1rem;
+        margin: 0 0 8px;
+      }
+
+      .summary p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .cta-section {
+        margin-top: 44px;
+      }
+
+      .cta-link {
+        color: var(--accent);
+        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.22em;
+      }
+
+      .cta-link:hover {
+        color: var(--accent-2);
+      }
+
+      .note {
+        background: var(--wash);
+        border-left: 4px solid var(--accent);
+        margin-top: 44px;
+        padding: 18px 20px;
+      }
+
+      .note h2 {
+        font-size: 1rem;
+        margin: 0 0 8px;
+      }
+
+      .note p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 48px;
+        padding-top: 18px;
+      }
+
+      footer p {
+        margin: 0 0 8px;
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.22em;
+      }
+
+      footer a:hover {
+        color: var(--accent-2);
+      }
+
+      @media (max-width: 760px) {
+        main {
+          padding: 36px 18px 52px;
+        }
+
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        main {
+          padding: 0;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="wrapper">
+    <main>
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
-
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">Github</a></p>
-        {% endif %}
-
-        {% if site.show_twitter %}
-        <p class="view"><a href="https://twitter.com/cnbecom">Twitter</a></p>
-        {% endif %}
-
-        {% if site.show_linkedin %}
-        <p class="view"><a href="https://www.linkedin.com/in/cnbecom/">LinkedIn</a></p>
-        {% endif %}
-
-        {% if site.show_angelco %}
-        <p class="view"><a href="https://angel.co/cnbecom">AngelCo</a></p>
-        {% endif %}
-
-        {% if site.show_stackoverflow %}
-        <p class="view"><a href="https://stackoverflow.com/users/1131232/cnbecom">Stackoverflow</a></p>
-        {% endif %}
-
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        {% endif %}
+        <p class="eyebrow">{{ site.title }}</p>
+        <h1>{{ site.description }}</h1>
+        <p class="lede">I help teams turn ambiguous product ideas into shippable mobile and platform work, with a focus on delivery clarity, quality, technical judgment, and cross-functional trust.</p>
+        <div class="summary-grid" aria-label="Focus areas">
+          <div class="summary">
+            <h2>Leadership</h2>
+            <p>Team formation, delivery planning, release readiness, mentoring, and stakeholder alignment.</p>
+          </div>
+          <div class="summary">
+            <h2>Product Judgment</h2>
+            <p>Problem framing, launch scope, workflow design, tradeoff clarity, and customer-centered execution.</p>
+          </div>
+          <div class="summary">
+            <h2>Technical Depth</h2>
+            <p>Native mobile architecture, platform integration, API boundaries, observability, testing, and release quality.</p>
+          </div>
+        </div>
       </header>
-      <section>
+
+      <div class="cta-section">
+        <a class="cta-link" href="./portfolio/b57e9817-dba2-4f96-977f-595098792068/">View Application Portfolio &rarr;</a>
+      </div>
+
+      <div class="note">
+        <h2>Additional Materials Available</h2>
+        <p>This public homepage is intentionally concise. A detailed portfolio, private materials, and a PDF version can be shared directly for interview conversations.</p>
+      </div>
 
       {{ content }}
 
-      </section>
       <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>cnbecom (at) gmail (dot) com</p>
+        <p>
+          <a href="https://www.linkedin.com/in/cnbecom/">LinkedIn</a> &middot;
+          <a href="https://github.com/cnbecom">GitHub</a> &middot;
+          <a href="https://x.com/cnbecom">X</a>
+        </p>
       </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
+    </main>
   </body>
 </html>
