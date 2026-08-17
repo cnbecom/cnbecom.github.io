@@ -10,6 +10,32 @@ I help teams turn ambiguous product ideas into shippable mobile and platform wor
 
 **Technical Depth** — Native mobile architecture, platform integration, API boundaries, observability, testing, and release quality.
 
+## Tech Stack
+
+**Languages** — Objective-C, Objective-C++, Swift, C++
+
+**Design Patterns** — MVC, MVVM, Coordinator, Finite State Machine, Singleton, Observable-based, Modular Architecture (SPM)
+
+**iOS Frameworks** — UIKit, Core Animation, Core Data, Core Bluetooth, Core Location, ARKit, AVFoundation, Core Audio, Core Graphics
+
+**Concurrency & Reactive** — Swift Concurrency (Async/Await, Actors), Combine, RxSwift
+
+**Integrations** — Persistent Storage, Push Notifications, Custom UI, Animations, Adaptable Layouts, Security (Keychain, Privacy Manifests)
+
+**Backend Integration** — Firebase, AWS, Custom REST-based Services
+
+**Benchmarking / Performance** — Xcode Instruments, Crashlytics, Fabric Answers, XCTest
+
+**CI/CD** — Horde/Swarm, Jenkins, TeamCity, GitHub Actions, CircleCI, Xcodebuild Tools
+
+**Deployment** — MS App Center, Enterprise Solutions, Apple App Store Connect, XCFramework Distribution, Swift Package Manager
+
+**Monitoring / Debugging** — Sentry, Grafana, Postman, Charles Proxy, Splunk, LaunchDarkly
+
+**Methodologies** — Kanban, Scrum with daily stand-ups, sprint presentations, and postmortems
+
+**Working Knowledge / Exposure** — SwiftUI, Kotlin, Kotlin Multiplatform, Unreal Engine C++, C#, XML Build Graphs, Python, Java, Android, JavaScript, Ethereum, IoT, Raspberry Pi, Google Glass, iBeacons
+
 [View Application Portfolio](./portfolio/b57e9817-dba2-4f96-977f-595098792068/)
 
 This public homepage is intentionally concise. A detailed portfolio, private materials, and a PDF version can be shared directly for interview conversations.
