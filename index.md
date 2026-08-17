@@ -10,6 +10,14 @@ I help teams turn ambiguous product ideas into shippable mobile and platform wor
 
 **Technical Depth** — Native mobile architecture, platform integration, API boundaries, observability, testing, and release quality.
 
+[View Application Portfolio](./portfolio/b57e9817-dba2-4f96-977f-595098792068/)
+
+This public homepage is intentionally concise. A detailed portfolio, private materials, and a PDF version can be shared directly for interview conversations.
+
+Feel free to email me at cnbecom (at) gmail (dot) com.
+
+----
+
 ## Tech Stack
 
 **Languages** — Objective-C, Objective-C++, Swift, C++
@@ -35,9 +43,3 @@ I help teams turn ambiguous product ideas into shippable mobile and platform wor
 **Methodologies** — Kanban, Scrum with daily stand-ups, sprint presentations, and postmortems
 
 **Working Knowledge / Exposure** — SwiftUI, Kotlin, Kotlin Multiplatform, Unreal Engine C++, C#, XML Build Graphs, Python, Java, Android, JavaScript, Ethereum, IoT, Raspberry Pi, Google Glass, iBeacons
-
-[View Application Portfolio](./portfolio/b57e9817-dba2-4f96-977f-595098792068/)
-
-This public homepage is intentionally concise. A detailed portfolio, private materials, and a PDF version can be shared directly for interview conversations.
-
-Feel free to email me at cnbecom (at) gmail (dot) com.
