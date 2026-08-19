@@ -172,11 +172,21 @@
         text-underline-offset: 0.22em;
       }
 
+      .project .prose p { color: var(--muted); margin: 0 0 12px; }
+      .project .prose ul, .project .prose ol { color: var(--muted); margin: 0 0 12px; padding-left: 24px; }
+      .project .prose li { margin-bottom: 4px; }
+      .project .prose strong { color: var(--ink); }
+      .project .prose a { color: var(--accent); display: inline; font-weight: inherit; margin-top: 0; }
+
       .project .asset-gallery {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 12px;
         margin-top: 14px;
-        overflow-x: auto;
+      }
+
+      .project .asset-gallery figure {
+        margin: 0;
       }
 
       .project .asset-gallery img {
@@ -184,7 +194,14 @@
         border-radius: 4px;
         height: 180px;
         object-fit: contain;
-        width: auto;
+        width: 100%;
+      }
+
+      .project .asset-gallery figcaption {
+        color: var(--muted);
+        font-size: 0.75rem;
+        line-height: 1.35;
+        margin-top: 6px;
       }
 
       .tech-stack {
@@ -195,6 +212,16 @@
 
       .tech-stack p {
         margin: 0 0 6px;
+      }
+
+      .tech-stack ul {
+        margin: 0 0 12px;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .tech-stack li {
+        margin-bottom: 4px;
       }
 
       .note {
@@ -209,6 +236,16 @@
         font-size: 0.9rem;
         margin-top: 48px;
         padding-top: 18px;
+      }
+
+      .section-intro {
+        color: var(--muted);
+        margin-bottom: 16px;
+        max-width: 820px;
+      }
+
+      .section-intro p {
+        margin: 0 0 12px;
       }
 
       @media (max-width: 760px) {
@@ -257,20 +294,26 @@
         <p class="eyebrow">Christopher Neil Becom</p>
         <h1>Engineering and Mobile Product Leader</h1>
         <p class="lede">I help teams turn ambiguous product ideas into shippable mobile and platform work, with a focus on delivery clarity, quality, technical judgment, and cross-functional trust.</p>
-        <div class="summary-grid" aria-label="Portfolio focus areas">
-          <div class="summary">
-            <h2>Leadership</h2>
-            <p>Team formation, delivery planning, release readiness, mentoring, and stakeholder alignment.</p>
+        
+          <div class="summary-grid" aria-label="Portfolio focus areas">
+            
+              <div class="summary">
+                <h2>Leadership</h2>
+                <p>Team formation, delivery planning, release readiness, mentoring, and stakeholder alignment.</p>
+              </div>
+            
+              <div class="summary">
+                <h2>Product Judgment</h2>
+                <p>Problem framing, launch scope, workflow design, tradeoff clarity, and customer-centered execution.</p>
+              </div>
+            
+              <div class="summary">
+                <h2>Technical Depth</h2>
+                <p>Native mobile architecture, platform integration, API boundaries, observability, testing, and release quality.</p>
+              </div>
+            
           </div>
-          <div class="summary">
-            <h2>Product Judgment</h2>
-            <p>Problem framing, launch scope, workflow design, tradeoff clarity, and customer-centered execution.</p>
-          </div>
-          <div class="summary">
-            <h2>Technical Depth</h2>
-            <p>Native mobile architecture, platform integration, API boundaries, observability, testing, and release quality.</p>
-          </div>
-        </div>
+        
       </header>
 
       
@@ -279,11 +322,9 @@
             <h2 id="profile-heading">Profile</h2>
           </div>
           <div class="prose">
-            
-              <p>I am an Engineering and Mobile Product Leader, with a background that spans team formation, release quality, native mobile architecture, product discovery, and cross-functional execution.</p>
-            
-              <p>This portfolio is organized around the kind of work hiring teams need to evaluate quickly: how ambiguous product ideas become shippable systems, how teams build confidence under constraint, and how technical judgment supports clear delivery decisions.</p>
-            
+            <p>I am an Engineering and Mobile Product Leader, with a background that spans team formation, release quality, native mobile architecture, product discovery, and cross-functional execution.</p>
+
+<p>This portfolio is organized around the kind of work hiring teams need to evaluate quickly: how ambiguous product ideas become shippable systems, how teams build confidence under constraint, and how technical judgment supports clear delivery decisions.</p>
           </div>
         </section>
       
@@ -314,246 +355,940 @@
         </section>
       
 
-      <section aria-labelledby="selected-work-heading">
-        <div class="section-title">
-          <h2 id="selected-work-heading">Selected Application Portfolio Work</h2>
-          <span>17 public projects</span>
-        </div>
-        <div class="projects">
+      
+        
+        <section aria-labelledby="section-0">
+          <div class="section-title">
+            <h2 id="section-0">Current and Emerging Work</h2>
+            <span>3 projects</span>
+          </div>
           
-            <article class="project">
-              <h2>EGS Marketplace</h2>
-              <p>Led mobile product delivery for the Epic Games Store marketplace across two chapters: co-founding Epic&#39;s first dedicated mobile team for an iOS marketplace effort during active platform litigation, and later serving as a senior engineer and mobile steward on a Kotlin Multiplatform project supporting six EGS app variants across iOS and Android.</p>
-              
-              
-              
-              
-            </article>
+            <div class="section-intro">
+              <p>OpenForm Studio, LLC is the organizing identity for current independent consulting, app development, AI tooling, workflow automation, and product experimentation.</p>
+            </div>
           
-            <article class="project">
-              <h2>Epic Online Services SDK</h2>
-              <p>Served as a primary mobile steward for Epic Online Services, helping make iOS and Android support a credible first-class platform concern. Built and maintained mobile sample applications that functioned as both internal test harnesses and external reference implementations, and pushed back when desktop or console assumptions did not translate safely to mobile.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-07-image-01.png" alt="Epic Online Services SDK">
-                  
-                    <img src="assets/page-07-image-02.png" alt="Epic Online Services SDK">
-                  
-                </div>
-              
-              
-            </article>
+          <div class="projects">
+            
+              <article class="project">
+                <h2>Community Booking Platform</h2>
+                
+                  <div class="prose"><p>Community Booking Platform is collaborative OpenForm Studio work with Keys 4 Community, a nonprofit serving the Triangle area, focused on turning message-and-spreadsheet scheduling into a trustworthy booking workflow. It highlights product and architecture judgment around clear participant roles, server-enforced scheduling rules, administrative oversight, notification workflows, and a shared API contract that supports web delivery now and native clients later.</p>
+
+<p>Public repository: <a href="https://github.com/cnbecom/community-booking-platform">Community Booking Platform</a></p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Translate a real coordination problem into a clear product workflow with defined roles, ownership boundaries, and reviewable delivery steps.</li>
+  <li>Balance nonprofit operating needs, participant experience, administrative oversight, and implementation scope.</li>
+  <li>Keep the product path grounded in trustworthy scheduling behavior rather than ad hoc messaging or spreadsheet workarounds.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Web-first delivery with a native-ready architecture, server-owned workflow state, role-based access, scheduling constraints enforced by the API, transactional notifications, OpenAPI contract discipline, Next.js/React/TypeScript, FastAPI/Python, PostgreSQL, Redis-backed jobs, OIDC-oriented auth, and Kotlin Multiplatform planning for later native clients.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>Turn-Based Mobile Game</h2>
+                
+                  <div class="prose"><p>Turn-Based Mobile Game is production-bound OpenForm Studio mobile game work in the Dots and Boxes family, planned first for iOS with Android following on the same shared core. The product direction combines short turn-based matches, native mobile UX, and a model-backed match loop where structured board state is encoded for an LLM to validate human turns and generate the computer’s next move.</p>
+
+<p>The work emphasizes product definition, cross-platform delivery judgment, and mobile architecture choices that keep the game portable without flattening it into a lowest-common-denominator UI. UIKit and SwiftUI shape the first iOS client, Kotlin Multiplatform owns shared match state, matrix encoding, model adapter boundaries, and apply-after-accept behavior, and dedicated Compose screens remain the Android path.</p>
+
+<p>Public repository: <a href="https://github.com/cnbecom/turn-based-mobile-game">Turn-Based Mobile Game</a></p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Shape the product path from idea to a releasable native mobile game.</li>
+  <li>Lock early technical decisions that protect future Android delivery without compromising the iOS product path.</li>
+  <li>Keep AI in the product loop where it creates differentiated gameplay, while keeping coding agents and delivery automation out of the shipped runtime.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>iOS first with UIKit and SwiftUI, Android follow-on with Kotlin and Jetpack Compose, Kotlin Multiplatform shared core, matrix-based match encoding, model-backed turn validation and opponent moves, fake-model testing, inference timeout/error handling, release preparation, QA, store packaging, and production-readiness review.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>Context-Aware AI Integration</h2>
+                
+                  <div class="prose"><p>Context-Aware AI Integration is production-bound OpenForm Studio native app work that integrates a language model with structured local context so generated output stays grounded in source material. The product direction emphasizes useful AI behavior inside a real mobile workflow, not a generic chatbot surface or a prompt assembled separately by each client.</p>
+
+<p>The work uses an iOS-first path with UIKit and SwiftUI, while keeping Android aligned through a Kotlin Multiplatform shared core and dedicated Compose UI. The shared module owns context assembly, session state, model adapter boundaries, and grounding checks so neither platform UI owns prompt construction, vendor response parsing, or acceptance of ungrounded output.</p>
+
+<p>Public repository: <a href="https://github.com/cnbecom/context-aware-ai-integration">Context-Aware AI Integration</a></p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Shape product AI into a grounded mobile workflow rather than a thin model wrapper.</li>
+  <li>Lock early technical decisions that keep iOS and Android behavior aligned without compromising native UX quality.</li>
+  <li>Keep delivery automation separate from product runtime AI.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>iOS first with UIKit and SwiftUI, Android follow-on with Kotlin and Jetpack Compose, Kotlin Multiplatform shared core, structured local context, model adapter boundaries, grounding checks, inference timeout/retry/fallback behavior, release preparation, QA, store packaging, and production-readiness review.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+          </div>
+        </section>
+      
+        
+        <section aria-labelledby="section-1">
+          <div class="section-title">
+            <h2 id="section-1">Artifacts / Epic Games</h2>
+            <span>5 projects</span>
+          </div>
           
-            <article class="project">
-              <h2>Community Booking Platform</h2>
-              <p>OpenForm Studio product work for turning message-and-spreadsheet scheduling into a trustworthy booking workflow for a Triangle-area nonprofit, with emphasis on participant roles, server-enforced scheduling rules, administrative oversight, notification workflows, and a shared API contract for web and future native clients.</p>
-              
-              
-              
-              
-                <a href="https://github.com/cnbecom/community-booking-platform">View Community Booking Platform repository</a>
-              
-            </article>
+            <div class="section-intro">
+              <p>I worked at Epic Games for nearly seven years across multiple teams, products, and hiring contexts. That arc began with building the company’s first dedicated native iOS team around an Authenticator app for iOS and Android, continued through Houseparty during a major growth surge, expanded into building a team to produce a native Epic Games Store iOS client during the Apple litigation, shifted to mobile platform stewardship for Epic Online Services SDK, and most recently included Kotlin Multiplatform work across the Epic Games App and EGS Marketplace.</p>
+            </div>
           
-            <article class="project">
-              <h2>Turn-Based Mobile Game</h2>
-              <p>OpenForm Studio product work for a production-bound native mobile game with short turn-based matches, iOS-first delivery, a Kotlin Multiplatform shared core, dedicated native UI paths, and a model-backed match loop for turn validation and opponent moves.</p>
-              
-              
-              
-              
-                <a href="https://github.com/cnbecom/turn-based-mobile-game">View Turn-Based Mobile Game repository</a>
-              
-            </article>
+          <div class="projects">
+            
+              <article class="project">
+                <h2>Epic Games App / EGS Marketplace</h2>
+                
+                  <div class="prose"><p>After shepherding EOSSDK’s mobile efforts on iOS, I was hired internally to support the Epic Games App and EGS Marketplace with the Kotlin Multiplatform project covering six app variants across iOS and Android. This KMP work covers related storefront and account problems, with a different hiring context, delivery model, team, and platform surface than the earlier native iOS Store client.</p>
+
+<p>I partnered across SDK, mobile, web, backend, SDET, QA, security, and product concerns to define safer integration paths, produce RFCs and system diagrams, surface brittle cross-layer behavior, and guide refactoring priorities toward simpler, more maintainable solutions.</p>
+
+<p>This period included cross-stack integration planning for Epic Online Services features, mobile-specific release-risk review, privacy declaration updates for embedded web features, production incident response, Grafana-backed observability work, and release triage when complex bugs surfaced late in the cycle. It also included designing and implementing a standards-based MFA/TOTP module, then adapting it quickly when cryptographic requirements changed late in the release cycle. That MFA work shipped in EGS Marketplace app variants and as a primary feature of the Epic Games App.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Led cross-stack integration planning and served as lead architect for Epic Online Services feature integration into the mobile apps.</li>
+  <li>Raised release-risk concerns when late-cycle refactors or brittle implementations threatened quality.</li>
+  <li>Served as a trusted cross-team owner during production incidents, on-call escalation, and complex launch triage.</li>
+  <li>Determined product and engineering KPIs, built Grafana monitoring dashboards, and used observability data to guide team priorities.</li>
+  <li>Used technical depth to make integration and observability issues reviewable across mobile, web, SDK, and backend partners.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Expanded the EGS Marketplace onto KMP-based iOS and Android product surfaces.</li>
+  <li>Used Swift, Kotlin Multiplatform, native web components, bridge/delegate patterns, authentication flows, MFA/TOTP, Grafana observability, privacy declarations, RFCs, system diagrams, and release-candidate discipline.</li>
+</ul>
+
+<p>The current Epic Games App is the US-available authenticator and chat app. Store copy states it does not include the Epic Games Store.</p>
+
+<ul>
+  <li>App Store (US): <a href="https://apps.apple.com/us/app/epic-games/id6480077263">Epic Games</a></li>
+  <li>Google Play: <a href="https://play.google.com/store/apps/details?id=com.epicgames.ega">Epic Games</a></li>
+</ul>
+
+<p>The Epic Games Store / EGS Marketplace on iOS is currently only available in select non-US markets, including the EU. The Android counterpart is sideloaded worldwide.</p>
+
+<ul>
+  <li>iOS install (EU / supported regions): <a href="https://store.epicgames.com/en-US/mobile/ios">Epic Games Store for iPhone and iPad</a></li>
+  <li>Android install (worldwide): <a href="https://store.epicgames.com/en-US/mobile/android">Epic Games Store for Android</a></li>
+  <li>Generic install: <a href="https://epic.download">epic.download</a></li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/egs-0.png" alt="Epic Games App / EGS Marketplace">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/egs_video-chat-0.png" alt="Epic Games App / EGS Marketplace">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-epic-games-app-ios-01.jpg" alt="Epic Games App / EGS Marketplace">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-epic-games-app-android-02.jpg" alt="Epic Games App / EGS Marketplace">
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>Epic Online Services SDK</h2>
+                
+                  <div class="prose"><p>After a brief period away from Epic, I re-joined to support EOSSDK’s mobile efforts. This became one of the strongest examples of mobile platform stewardship during my Epic tenure. I served as a primary mobile steward for Epic Online Services, helping make iOS and Android support a credible first-class platform concern rather than an afterthought behind desktop and console assumptions.</p>
+
+<p>The work required defining what mobile parity actually meant for SDK behavior. On mobile, parity is not only API coverage. It also includes lifecycle behavior, threading, networking reliability, OS version changes, embedded web views, platform bindings, release validation, partner integration paths, and sample applications that prove the SDK can survive real app conditions.</p>
+
+<p>I built and maintained mobile-centric sample applications that functioned both as internal end-to-end test harnesses and external reference implementations. Those samples helped surface edge cases earlier, reduced partner onboarding friction, and improved debugging quality across iOS, Android, bindings, native clients, embedded web, and SDK core behavior.</p>
+
+<p>When issues surfaced, the work often crossed engine-level C++, EOS core logic, Objective-C++ and JNI bindings, native app code, OS behavior, and embedded web views. I pushed back when desktop or console assumptions did not translate safely to mobile, and I worked closely with SDETs, QA managers, partner teams, first-party titles, web teams, and commerce-related flows that depended on reliable SDK behavior. That included supporting the SDK’s Epic payment flows on mobile, covering checkout, payment-method handling, creator tags, and the native/web boundaries those purchases depend on.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Served as mobile authority for a product-critical SDK surface, coordinating across SDETs, QA managers, partner teams, first-party and third-party titles, and commerce stakeholders.</li>
+  <li>Protected partner trust by turning mobile constraints into concrete release and validation work.</li>
+  <li>Strengthened risk detection through beta-OS testing, deeper device testing, and direct QA/SDET collaboration.</li>
+  <li>Served as a trusted on-call owner for production incidents affecting mobile SDK behavior.</li>
+  <li>Balanced long-term platform credibility with practical release needs.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Supported first-party and third-party titles through SDK implementation, sample apps, release validation, and integration debugging.</li>
+  <li>Diagnosed issues across C++, Objective-C++, JNI, native iOS/Android, embedded web, OS behavior, and commerce-related flows.</li>
+  <li>Supported EOSSDK Epic payment flows on mobile, including checkout and payment-method surfaces used in SDK validation.</li>
+  <li>Supported Social Overlay integration into Fall Guys on mobile, including friends and party overlay behavior in a live title.</li>
+  <li>Used mobile sample applications to reduce onboarding friction and improve end-to-end validation.</li>
+</ul>
+
+<p>Related first-party titles I supported via EOSSDK or directly include Fortnite and Fall Guys.</p>
+
+<ul>
+  <li>Fortnite App Store (US): <a href="https://apps.apple.com/us/app/fortnite/id6483539426">Fortnite</a></li>
+  <li>Fortnite Google Play: <a href="https://play.google.com/store/apps/details?id=com.epicgames.fortnite">Fortnite</a></li>
+</ul>
+
+<p>Fall Guys was one of the first-party titles I supported during this period. The work included Social Overlay integration into Fall Guys, covering friends, party, and overlay behavior on mobile rather than treating the overlay as a desktop surface dropped onto a game UI.</p>
+
+<p>Fall Guys mobile is available via the Epic Games Store Mobile App at <a href="https://www.fallguys.com/download">Fall Guys download</a>.</p></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/page-07-image-01.png" alt="Epic Online Services iOS sample in Xcode">
+                        
+                          <figcaption>Epic Online Services iOS sample in Xcode</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-07-image-02.png" alt="Epic Online Services iOS sample app">
+                        
+                          <figcaption>Epic Online Services iOS sample app</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/eos_achivements-sample-0.png" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/eos_achivements-sample-1.png" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/epic-payment-flows.PNG" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-fortnite-logo.png" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-fortnite-e3-2018.jpg" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-fall-guys-cover.jpg" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/fallguys_0.png" alt="Epic Online Services SDK">
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>Epic Games Store iOS, Litigation Period</h2>
+                
+                  <div class="prose"><p>After Houseparty, I was called to build a team and produce a native iOS Epic Games Store client during active litigation between Epic and Apple over iOS App Store distribution and in-app payment rules. See <a href="https://en.wikipedia.org/wiki/Epic_Games_v._Apple">Epic Games v. Apple</a> and the <a href="https://www.courtlistener.com/docket/17442392/epic-games-inc-v-apple-inc/">CourtListener docket</a>.</p>
+
+<p>The work began with strategic questions such as how the Epic Games Store should show up on iOS when its mobile footprint was largely Android-first, and how to position an iOS version during that dispute. My role was to translate that opportunity into a working delivery model. I built and managed a multidisciplinary team of more than ten people, including iOS engineers, web engineers, UX, backend, production, QA, and analytics contributors across both contractors and full-time staff. I defined ownership boundaries, set review standards and quality thresholds, managed release practices, and partnered with SDET, security, legal, and executive stakeholders throughout.</p>
+
+<p>The iOS client wrapped the Epic Games Store in native application infrastructure, with authorization and user context passed through web bridges and native delegates. That architecture let us move quickly while still respecting mobile expectations around authentication, session handling, app lifecycle, privacy declarations, and App Store submission readiness.</p>
+
+<p>Within roughly five months, the team produced a release candidate that was ready for Apple review, pending legal and executive approval. The project ultimately could not move through the normal developer-account path because of the ongoing dispute, but the team delivered the intended release candidate and created a practical foundation for later EGS Marketplace work.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Built and managed a 10+ person multidisciplinary team around an ambiguous, high-visibility mobile initiative.</li>
+  <li>Hired contractors, defined roles, set quality thresholds, and ran demos for leadership as go/no-go decision points.</li>
+  <li>Coordinated design, engineering, QA, SDET, production, executive, legal, security, and backend dependencies.</li>
+  <li>Protected momentum while platform and approval constraints shifted outside the team’s control.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Expanded the Epic Games Store concept onto native iOS without rebuilding the storefront from scratch.</li>
+  <li>Used Swift, native web components, bridge/delegate patterns, authentication flows, privacy declarations, and release-candidate discipline.</li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/product-development_egs.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-03-image-03.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-03-image-04.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-04-image-01.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-04-image-02.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-04-image-03.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-04-image-04.png" alt="Epic Games Store iOS, Litigation Period">
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>Houseparty</h2>
+                
+                  <div class="prose"><p>Houseparty was a high-scale social video application that became a major product priority during the onset of COVID-19, when daily active users surged from roughly 3 million to more than 30 million. After the Authenticator work, my team was assigned to Houseparty so we could help an already-moving organization absorb demand, deliver new engagement surfaces, and support rapid feature development.</p>
+
+<p>My team entered an existing product and engineering environment, learned enough of the system to contribute quickly, and delivered work that crossed production tooling, backend support, mobile UI, and release coordination.</p>
+
+<p>Our first initiative was Marketing Splash, a dynamic marketing surface that production could update independently to guide users toward current and upcoming in-app events. The feature shipped in roughly four weeks, including backend updates, build-server and script changes, mobile-client UI work, and app architecture updates.</p>
+
+<p>After that, we collaborated with Houseparty engineering leads on UNO, one of the application’s most ambitious game initiatives. I helped lead the effort around iOS support and cross-functional coordination while working with web and Android leads. During the same period, I moved onto Android work where the team needed additional support, contributing to the Reactions feature while ramping on Kotlin, Java, and Android practices.</p>
+
+<p>Houseparty also strengthened my product instrumentation and rollout experience. Feature work used LaunchDarkly for A/B testing and rollout control, paired with internal metrics and Grafana dashboards to understand user behavior, application health, feature performance, and release risk during a high-velocity period.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Managed my team through a rapid reassignment from one strategic initiative to another during a 10x user-growth surge.</li>
+  <li>Onboarded quickly into an established product with meaningful production pressure and kept the team productive.</li>
+  <li>Coordinated iOS, Android, web, backend, production, and partner-facing work across multiple concurrent initiatives.</li>
+  <li>Modeled team flexibility by moving where the delivery risk was highest, including stepping onto Android work myself.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Built a production-managed engagement surface for live events and product communication.</li>
+  <li>Supported a partner game launch in a multiplatform social environment.</li>
+  <li>Worked across iOS, Android, Kotlin, Java, mobile UI, backend integration, scripts, build infrastructure, LaunchDarkly, internal metrics, and Grafana.</li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/page-06-image-01.png" alt="Houseparty video room with UNO">
+                        
+                          <figcaption>Houseparty video room with UNO</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-06-image-02.png" alt="Houseparty video room with Reactions">
+                        
+                          <figcaption>Houseparty video room with Reactions</figcaption>
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>Epic Games Authenticator</h2>
+                
+                  <div class="prose"><p>I was hired by Epic with three initial objectives. The first was to build the company’s first dedicated native iOS team. The second was to enter Apple’s iOS App Store ecosystem with a native application. The third was to solve a highly visible customer problem.</p>
+
+<p>The Authenticator was the product used to pursue those objectives. It was the first iOS mobile initiative I led after joining Epic. I hired engineers, structured the team across iOS, UX, production, QA, analytics, and backend contributors, and defined the working practices that became the foundation for all later Epic mobile work. The product gave us a focused surface for proving mobile delivery capability while addressing a customer-facing account-security need. It was built in Swift with native web components, with a product goal of reducing authentication friction without compromising account security. The sign-up flow supported automatic 2FA setup, and push notifications allowed users to respond to authentication requests from the device level without needing to fully launch the app.</p>
+
+<p>The project was prepared for App Store submission pending executive sign-off and was released internally as a successful beta. The team was then assigned to Houseparty to support that product’s growth. The Authenticator work established team patterns, mobile architecture direction, QA expectations, and delivery muscle that carried into later Epic assignments. Years later, related MFA/TOTP work shipped inside EGS Marketplace app variants and the Epic Games App.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Created Epic’s first dedicated iOS delivery team: hired engineers, defined roles, and established the operating model inside a larger platform organization.</li>
+  <li>Mentored engineers and structured work across the team while building delivery credibility for mobile inside Epic.</li>
+  <li>Used a focused security product to prove team capability before the group was reassigned to Houseparty.</li>
+  <li>Balanced customer friction, security expectations, cryptographic requirements, platform constraints, QA expectations, and executive review.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Improved the 2FA experience through mobile-first authentication flows and push response.</li>
+  <li>Used Swift, native web components, authentication flows, push notifications, and internal beta release practices.</li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/page-03-image-01.png" alt="Epic Games Authenticator home screen">
+                        
+                          <figcaption>Epic Games Authenticator home screen</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-03-image-02.png" alt="Epic Games Authenticator account list">
+                        
+                          <figcaption>Epic Games Authenticator account list</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-03-image-03.png" alt="Epic Games Authenticator login approval">
+                        
+                          <figcaption>Epic Games Authenticator login approval</figcaption>
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+          </div>
+        </section>
+      
+        
+        <section aria-labelledby="section-2">
+          <div class="section-title">
+            <h2 id="section-2">Artifacts / Insight</h2>
+            <span>3 projects</span>
+          </div>
           
-            <article class="project">
-              <h2>Context-Aware AI Integration</h2>
-              <p>OpenForm Studio product work for a production-bound native app that integrates a language model with structured local context, using an iOS-first path, a Kotlin Multiplatform shared core, dedicated native UI paths, and grounding checks so generated output stays tied to source material.</p>
-              
-              
-              
-              
-                <a href="https://github.com/cnbecom/context-aware-ai-integration">View Context-Aware AI Integration repository</a>
-              
-            </article>
+          <div class="projects">
+            
+              <article class="project">
+                <h2>TIAA-CREF</h2>
+                
+                  <div class="prose"><p>I began on a feature team focused on retirement and investment guidance, then was promoted within roughly 90 days into Release Manager and Team Lead responsibilities to stabilize delivery cycles and restore stakeholder trust.</p>
+
+<p>I led an onshore and offshore iOS team of roughly eight engineers with embedded QA support. I owned sprint commitments, release readiness, branch merges, code-review standards, delivery coordination, defect triage, regression review, production issue investigation, and weekend validation during critical backend upgrades.</p>
+
+<p>As Team Lead, I partnered with product managers, UX, analytics, QA, Android leads, business stakeholders, and client leadership to turn feature concepts into estimated, planned, groomed, and delivered work.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Owned release quality and production readiness for recurring mobile releases.</li>
+  <li>Led onshore/offshore contributors, code reviews, merge management, QA coordination, defect triage, and production validation.</li>
+  <li>Mentored developers, established informal mentoring practices, and created standards guilds to align onshore and offshore contributors.</li>
+  <li>Translated stakeholder requests into planned, estimated, testable mobile work through grooming, estimation, and cross-functional partnership.</li>
+  <li>Built stakeholder trust through clear communication, calm execution, and consistent follow-through.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Guided financial-product workflows from discovery and technical validation through production delivery.</li>
+  <li>Integrated customer-support and payment-related features into a mature consumer app.</li>
+  <li>Worked with Objective-C, Swift 4.x, Core Animation, Fabric, Firebase, Charts, Crashlytics, analytics, authentication, networking, shared component libraries, and modular service layers with strong test coverage.</li>
+</ul>
+
+<p>The consumer app is now published as TIAA.</p>
+
+<ul>
+  <li>App Store (US): <a href="https://apps.apple.com/us/app/tiaa/id341447597">TIAA</a></li>
+  <li>Google Play: <a href="https://play.google.com/store/apps/details?id=com.mobile.tiaa.cref">TIAA</a></li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-icon.png" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-ios-01.png" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-ios-02.png" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-ios-03.png" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-ios-04.png" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-android-01.jpg" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-android-02.jpg" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/store-tiaa-android-03.jpg" alt="TIAA-CREF">
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>Clarifye / Family Dollar</h2>
+                
+                  <div class="prose"><p>I stepped into active development on two additional client projects and helped keep work moving despite midstream handoffs and competing delivery needs.</p>
+
+<p>For Clarifye, an enterprise application in the eyewear space, I implemented feature updates and addressed breaking changes to an app extension service caused by iOS 11. For Family Dollar, I stepped in during an extended staffing gap and contributed while continuing to support my existing client obligations.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Managed competing client obligations and delivery timelines across multiple concurrent engagements.</li>
+  <li>Entered active projects midway through their lifecycle and became productive quickly.</li>
+  <li>Served as interim technical lead at Family Dollar during an extended staffing gap.</li>
+  <li>Reduced delivery risk for teams dealing with staffing disruption and platform changes.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Supported enterprise mobile workflows and iOS platform compatibility work.</li>
+  <li>Addressed app-extension breakage and feature updates under UAT pressure.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>Procter and Gamble / Microsoft</h2>
+                
+                  <div class="prose"><p>This product exploration built a voice-driven iOS workflow for HR-related tasks using Microsoft’s Cortana services. The product goal was to demonstrate how conversational input could simplify employee interactions with HR systems.</p>
+
+<p>My contribution combined product shaping with low-level mobile technical execution. The navigation model was intentionally straightforward so the executive presentation could focus attention on the voice interaction. I used Core Animation and Core Graphics to build a dynamic waveform that reflected vocal amplitude, then worked in C on a Core Audio layer to transform PCM audio from the device into byte data Cortana could process.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Helped convert a new interaction concept into a focused executive/client-facing product experience.</li>
+  <li>Balanced presentation clarity with enough technical realism to validate feasibility.</li>
+  <li>Used technical judgment to make the core product interaction visible and credible.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Explored voice-driven HR task workflows and virtual-assistant integration.</li>
+  <li>Used Swift, Objective-C/C interop, Core Audio, PCM audio processing, Core Animation, Core Graphics, and web-service integration.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+          </div>
+        </section>
+      
+        
+        <section aria-labelledby="section-3">
+          <div class="section-title">
+            <h2 id="section-3">Artifacts / Early Career</h2>
+            <span>7 projects</span>
+          </div>
           
-            <article class="project">
-              <h2>Transmira</h2>
-              <p>Turned a novel AR concept into an investor-facing iOS product by combining location-aware virtual objects, shared inventory, real-world redemption, and a Firebase backend with realtime observation. Built after researching ARKit at WWDC 2017 and working directly with the startup founder.</p>
-              
-              
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>Houseparty</h2>
-              <p>Helped absorb a surge from roughly 3 million to more than 30 million daily active users during the onset of COVID-19. Delivered a dynamic marketing surface in roughly four weeks, supported a major partner game initiative, and moved onto Android work where the team needed additional support. Feature work used LaunchDarkly for A/B testing and Grafana for observability.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-06-image-01.png" alt="Houseparty">
-                  
-                    <img src="assets/page-06-image-02.png" alt="Houseparty">
-                  
-                </div>
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>Epic Games Authenticator</h2>
-              <p>Led the first iOS mobile initiative at Epic Games, a standalone authenticator that established team patterns, mobile architecture direction, and delivery muscle. Later designed and implemented a standards-based MFA/TOTP module that shipped in EGS mobile app variants and as a primary feature of the Epic Games App.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-03-image-01.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-03-image-02.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-03-image-03.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-03-image-04.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-04-image-01.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-04-image-02.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-04-image-03.png" alt="Epic Games Authenticator">
-                  
-                    <img src="assets/page-04-image-04.png" alt="Epic Games Authenticator">
-                  
-                </div>
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>TIAA-CREF</h2>
-              <p>Promoted within roughly 90 days from a feature team role to Release Manager and Team Lead on the main consumer iOS application for TIAA-CREF. Led an onshore and offshore team of roughly eight engineers, owned sprint commitments, release readiness, code-review standards, and production validation during critical backend upgrades.</p>
-              
-              
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>Clarifye / Family Dollar</h2>
-              <p>Stepped into active development on two additional client projects while supporting existing obligations. Implemented feature updates and addressed breaking changes caused by iOS 11 for an enterprise eyewear application, and contributed to a retail client during an extended staffing gap.</p>
-              
-              
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>Procter and Gamble / Microsoft</h2>
-              <p>Built a voice-driven iOS workflow for HR-related tasks using Microsoft Cortana services. Used Core Animation and Core Graphics for a dynamic waveform reflecting vocal amplitude, and worked in C on a Core Audio layer to transform PCM audio from the device into byte data the service could process.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-10-image-01.jpg" alt="Procter and Gamble / Microsoft">
-                  
-                </div>
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>rSites</h2>
-              <p>Consulted on a location manager and data collection tool for farmworker aid organizations, helping improve the codebase, shape architecture, integrate backend capabilities, and deliver key features ahead of a spring beta with selected organizations.</p>
-              
-              
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>Visual Merchandiser</h2>
-              <p>Built a retail operations product concept using Core Bluetooth and iBeacons for check-in/check-out workflows tied to physical locations, plus a custom visual calendar displaying retail events across day, month, and year views.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-11-image-01.png" alt="Visual Merchandiser">
-                  
-                    <img src="assets/page-11-image-02.png" alt="Visual Merchandiser">
-                  
-                    <img src="assets/page-11-image-03.png" alt="Visual Merchandiser">
-                  
-                    <img src="assets/page-11-image-04.png" alt="Visual Merchandiser">
-                  
-                </div>
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>J.A.R.V.I.S.</h2>
-              <p>Collaborated on an internal IoT front-office concept that greeted visitors through a large touch screen and external speakers, using a Raspberry Pi, sensors, and Slack integration to connect visitor activity with employees.</p>
-              
-              
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>MiraSDK</h2>
-              <p>Led iOS SDK development as the first hire and sole mobile engineer on a three-person founding team for a targeted advertising platform using background Bluetooth messages to proprietary IoT devices. Treated the SDK as a long-lived product with decisions around API design, versioning, backward compatibility, and release readiness.</p>
-              
-              
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>My Daily Rebus</h2>
-              <p>Independently built, designed, released, and maintained a puzzle app centered on rebus brain-teasers. Owned the full product lifecycle from idea through App Store release, with native Swift implementation, custom animations, Firebase integration, and no third-party animation frameworks.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-05-image-01.png" alt="My Daily Rebus">
-                  
-                    <img src="assets/page-05-image-02.png" alt="My Daily Rebus">
-                  
-                    <img src="assets/page-05-image-03.png" alt="My Daily Rebus">
-                  
-                    <img src="assets/page-05-image-04.png" alt="My Daily Rebus">
-                  
-                </div>
-              
-              
-            </article>
-          
-            <article class="project">
-              <h2>What&#39;s Around</h2>
-              <p>An early Google Glass application that updated the display with nearby landmarks and points of interest in real time, with distance and Google Places review context. The 74th Glass application released.</p>
-              
-              
-              
-                <div class="asset-gallery">
-                  
-                    <img src="assets/page-12-image-01.jpg" alt="What&#39;s Around">
-                  
-                </div>
-              
-              
-            </article>
-          
-        </div>
-      </section>
+          <div class="projects">
+            
+              <article class="project">
+                <h2>Transmira</h2>
+                
+                  <div class="prose"><p>In the early stages of OpenForm Studio, the studio collaborated with Robert Rice, CEO of Transmira, on Omniscape. I was using a different LLC name at the time. It was an early AR product exploration that required turning a novel concept into an investor-facing iOS product build. The core product idea joined location, shared virtual objects, user inventory, and real-world redemption into a mobile AR experience.</p>
+
+<p>My role was to move the idea from concept to a working investor-facing mobile experience. I researched ARKit after WWDC 2017, presented AR/MR/VR trends for prospective clients and the local technology community, and then worked directly with Robert to build a mobile experience suitable for investor conversations.</p>
+
+<p>The product challenge was not only rendering objects in AR. It was making virtual objects behave like shared, location-aware inventory that could be observed by multiple users, moved between locations, and connected to real-world goods. To support that behavior, I built a Firebase backend with simple JSON-oriented data structures and realtime observation, then consumed those updates from the iOS client.</p>
+
+<p>The mobile implementation prioritized validation, speed, and believability over long-term platform polish. Many key behaviors were isolated in a scene-rendering view controller and scene-object subclasses, including GPS coordinate conversion, object placement, inventory behavior, and observable updates from the backend.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Converted a speculative AR concept into an investor-ready product validation path.</li>
+  <li>Chose implementation tradeoffs appropriate to validation risk and timeline.</li>
+  <li>Connected market storytelling, product behavior, backend structure, and iOS execution.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Explored geospatial AR object behavior, shared inventory, and real-world redemption loops.</li>
+  <li>Used ARKit, Firebase, realtime database observation, iOS SDKs, GPS coordinate conversion, and scene rendering.</li>
+  <li>Prioritized “making it stick” for validation while documenting maintainability tradeoffs for later product stages.</li>
+</ul>
+
+<p>Public context:</p>
+
+<ul>
+  <li><a href="https://transmira.com/">Transmira</a></li>
+  <li><a href="https://www.omniscape.com/">Omniscape</a></li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>rSites</h2>
+                
+                  <div class="prose"><p>Another early OpenForm Studio partnership was with rSites on a location manager and data collection tool for farmworker aid organizations, designed to help teams plan, execute, and analyze visits to migrant labor camps and other sites where farmworkers live.</p>
+
+<p>I consulted with the creator beginning in 2019, helping improve the codebase, shape architecture, integrate backend capabilities, and deliver key features ahead of a spring beta with selected aid organizations. The application was later used in the field by a test group during the growing season, with longer-term plans for a revamped iOS client.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Supported a mission-driven product through architecture guidance and practical delivery.</li>
+  <li>Helped move a field workflow toward beta readiness.</li>
+  <li>Worked in a consulting mode where scope, priority, and implementation had to stay tightly aligned.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Improved mobile workflows for planning, field data collection, and operational follow-up.</li>
+  <li>Supported backend integration, codebase improvements, and iOS product direction.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>Visual Merchandiser</h2>
+                
+                  <div class="prose"><p>Visual Merchandiser was a retail operations product concept for department and clothing store customers. The product helped floor managers assign, track, and coordinate employee tasks across a physical retail environment.</p>
+
+<p>I implemented a check-in/check-out workflow using Core Bluetooth and iBeacons, tying task activity to physical locations. I also built a custom visual calendar that displayed retail events across day, month, and year views, with interactions for changing dates and managing assigned tasks.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Turned an operational retail idea into a concrete mobile product experience for prospective customers.</li>
+  <li>Connected physical-world workflow needs to mobile product behavior.</li>
+  <li>Balanced product storytelling with implementation depth.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Explored location-aware task management, retail events, and floor operations workflows.</li>
+  <li>Used Core Bluetooth, iBeacons, custom calendar UI, Swift, and reusable view components.</li>
+</ul>
+
+<p>Selected files:</p>
+
+<ul>
+  <li><code>CalendarViewController.swift</code></li>
+  <li><code>YearMonthDayCollectionViewCell.swift</code></li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/page-11-image-01.png" alt="Visual Merchandiser dashboard">
+                        
+                          <figcaption>Visual Merchandiser dashboard</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-11-image-02.png" alt="Visual Merchandiser, iOS">
+                        
+                          <figcaption>Visual Merchandiser, iOS</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-11-image-03.png" alt="Visual Merchandiser, iOS">
+                        
+                          <figcaption>Visual Merchandiser, iOS</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-11-image-04.png" alt="Visual Merchandiser, iOS">
+                        
+                          <figcaption>Visual Merchandiser, iOS</figcaption>
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>J.A.R.V.I.S.</h2>
+                
+                  <div class="prose"><p>J.A.R.V.I.S. was an internal IoT front-office concept developed between client projects. The application greeted and interacted with office visitors through a large touch screen and external speakers, using a Raspberry Pi, sensors, and Slack integration to connect visitor activity with employees.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Collaborated on an internal product concept that combined hardware, software, and workplace operations.</li>
+  <li>Explored how automation could improve a real office workflow.</li>
+  <li>Created product learning through a low-cost internal experiment.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Combined IoT hardware, sensors, Raspberry Pi, touch interaction, audio output, and Slack workflow integration.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>MiraSDK</h2>
+                
+                  <div class="prose"><p>MiraSDK was an iOS SDK for a targeted advertising platform that used background Bluetooth messages to proprietary IoT devices to trigger relevant content on enabled digital out-of-home screens.</p>
+
+<p>As the first iOS hire and sole mobile engineer on a three-person founding team, I led iOS SDK development and helped the company move from early technical concept toward partner-ready platform capability. I treated the SDK as a long-lived product, making decisions around API design, versioning, backward compatibility, error handling, resilience, manual testing, hardware testing, and release readiness.</p>
+
+<p>The work also required product and business judgment. I helped translate hardware constraints, platform limitations, UX expectations, battery impact, iOS backgrounding behavior, Bluetooth behavior, and evolving requirements into practical product guidance. In one case, identifying a critical iOS backgrounding and Bluetooth constraint invalidated an early product assumption and forced mitigation before more time or capital was spent in the wrong direction.</p>
+
+<p>I integrated with external libraries including Facebook Graph API and Twitter Fabric/Twitter Kit, and later supported front-end and backend development as company needs expanded.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Led iOS platform development in an early startup environment.</li>
+  <li>Built partner-facing SDK capability while adapting to changing company scope.</li>
+  <li>Operated across mobile, frontend, backend, and cloud needs as the product evolved.</li>
+  <li>Explained technical capabilities, risks, and tradeoffs to founders, non-technical stakeholders, and investor-adjacent audiences.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Built SDK behavior around Bluetooth, proprietary devices, advertising triggers, partner integration, API design, versioning, backward compatibility, error handling, resilience, and release validation.</li>
+  <li>Worked with Objective-C, Bluetooth, Facebook Graph API, Twitter Fabric/Twitter Kit, Sails.js, Express.js, React.js, and AWS technologies.</li>
+</ul></div>
+                
+                
+                
+              </article>
+            
+              <article class="project">
+                <h2>My Daily Rebus</h2>
+                
+                  <div class="prose"><p>My Daily Rebus was an independently built puzzle app centered on rebus puzzles, visual and textual brain-teasers that represent familiar words, phrases, or sayings.</p>
+
+<p>I architected, designed, implemented, released, and maintained the application, including Firebase integration, native Swift implementation, custom animations, app assets, and puzzle content.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Owned the full product lifecycle from idea through App Store release.</li>
+  <li>Used independent product work to stay close to customer experience, quality, and execution details.</li>
+  <li>Practiced the end-to-end judgment expected of engineering leaders who need to understand product and implementation tradeoffs.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Built a content-driven puzzle experience with native UI, custom animation, Firebase, Swift 4.1, and no third-party animation frameworks.</li>
+  <li>Prioritized maintainability, separation of concerns, and App Store readiness.</li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/page-05-image-01.png" alt="My Daily Rebus, iOS">
+                        
+                          <figcaption>My Daily Rebus, iOS</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-05-image-02.png" alt="My Daily Rebus puzzle">
+                        
+                          <figcaption>My Daily Rebus puzzle</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-05-image-03.png" alt="My Daily Rebus, iOS">
+                        
+                          <figcaption>My Daily Rebus, iOS</figcaption>
+                        
+                      </figure>
+                    
+                      
+                      <figure>
+                        <img src="assets/page-05-image-04.png" alt="My Daily Rebus, iOS">
+                        
+                          <figcaption>My Daily Rebus, iOS</figcaption>
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+              <article class="project">
+                <h2>What&#39;s Around</h2>
+                
+                  <div class="prose"><p>What’s Around was an early Google Glass application that updated the Glass display with nearby landmarks and points of interest. As the user moved, destinations updated in real time with distance and, where available, Google Places review context.</p>
+
+<p>I managed the project, worked directly with Google on requirements, coordinated with a Java developer using Google App Engine and Endpoints, and handled much of the UI/UX and asset work. The application was the 74th Glass application released.</p>
+
+<p>Leadership focus:</p>
+
+<ul>
+  <li>Managed a small wearable-platform project from concept through release.</li>
+  <li>Coordinated partner requirements, engineering implementation, and product presentation.</li>
+  <li>Built early experience with wearable/location-based product constraints.</li>
+</ul>
+
+<p>Product and technical focus:</p>
+
+<ul>
+  <li>Explored wearable UX, location-aware recommendations, Google Places data, App Engine, Endpoints, UI/UX, and asset creation.</li>
+</ul></div>
+                
+                
+                
+                  <div class="asset-gallery">
+                    
+                      
+                      <figure>
+                        <img src="assets/page-12-image-01.jpg" alt="Press coverage of What&#39;s Around for Google Glass">
+                        
+                          <figcaption>Press coverage of What&#39;s Around for Google Glass</figcaption>
+                        
+                      </figure>
+                    
+                  </div>
+                
+              </article>
+            
+          </div>
+        </section>
+      
 
       
         <section aria-labelledby="principles-heading">
@@ -580,13 +1315,35 @@
             <h2 id="tech-stack-heading">Tech Stack</h2>
           </div>
           <div class="tech-stack">
-            
-              <p>Swift, Kotlin, Kotlin Multiplatform, iOS, Android, SwiftUI, UIKit, Jetpack Compose</p>
-            
-              <p>Python, TypeScript, React, Next.js, FastAPI, PostgreSQL, Firebase, AWS</p>
-            
-              <p>XCTest, Grafana, Sentry, Crashlytics, LaunchDarkly, GitHub Actions, Jenkins</p>
-            
+            <p>Mobile:</p>
+
+<ul>
+  <li>Swift, Objective-C, Objective-C++, Kotlin, Java, C++, C, iOS, Android, SwiftUI, UIKit, Auto Layout, Core Animation, Core Graphics, Core Audio, Core Bluetooth, Core Location, AVFoundation, iBeacons, ARKit, SceneKit, Firebase SDKs, push notifications, native web components, App Store Connect, privacy manifests, and App Store release workflows.</li>
+</ul>
+
+<p>Architecture and platform:</p>
+
+<ul>
+  <li>Kotlin Multiplatform, Swift Concurrency, Combine, RxSwift, Kotlin Flows, modular architecture, SPM-based modules, MVC, MVVM, Coordinator, finite state machines, observable patterns, authentication, analytics, networking, shared component libraries, SDK design, XCFramework distribution, Swift Package Manager, web/native bridge patterns, offline-capable data sync, realtime data observation, REST services, Firebase, Core Data, build scripts, release-candidate workflows, and embedded web integration.</li>
+</ul>
+
+<p>Product and delivery:</p>
+
+<ul>
+  <li>Team formation, hiring input, release management, SDET and QA collaboration, Definition of Done quality gates, defect triage, production validation, incident response, stakeholder partnership, discovery, POCs, MVP scoping, estimation, prioritization, grooming, cross-functional delivery, partner collaboration, KPI definition, metric design, public/private content sanitization, and AI-assisted SDLC workflows.</li>
+</ul>
+
+<p>Quality, observability, and tooling:</p>
+
+<ul>
+  <li>XCTest, mock dependency injection, Xcode Instruments, Sentry, Crashlytics, Grafana, Splunk, LaunchDarkly, Charles Proxy, Postman, Jenkins, GitHub Actions, CircleCI, Xcodebuild tooling, Horde/Swarm, YAML, JSON, XML build graphs, and production monitoring.</li>
+</ul>
+
+<p>Web, backend, cloud, and automation:</p>
+
+<ul>
+  <li>React.js, Sails.js, Express.js, JavaScript, Python, AWS technologies, GCP, Google App Engine, Google Endpoints, Firebase Realtime Database, Firebase Authentication, Firebase Storage, Firebase Functions, Slack integrations, proprietary REST APIs, web services, LangChain, n8n, agents, skills, MCPs, and hooks.</li>
+</ul>
           </div>
         </section>
       
@@ -605,7 +1362,5 @@
         
       </footer>
     </main>
-    <script data-goatcounter="https://cnbecom.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
