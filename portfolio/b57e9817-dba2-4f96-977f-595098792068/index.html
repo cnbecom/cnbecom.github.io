@@ -248,6 +248,86 @@
         margin: 0 0 12px;
       }
 
+      .toc {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin-top: 44px;
+        padding: 18px 0;
+      }
+
+      .toc h2 {
+        font-size: 1rem;
+        color: var(--muted);
+        margin: 0 0 12px;
+        font-weight: 600;
+      }
+
+      .toc ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+      }
+
+      .toc a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .toc a:hover {
+        text-decoration: underline;
+      }
+
+      /* --- Image hover / lightbox --- */
+      main img {
+        cursor: zoom-in;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      main img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      }
+
+      .lightbox-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+      }
+
+      .lightbox-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .lightbox-overlay img {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        cursor: default;
+        transform: none;
+        margin: 0;
+      }
+
+      .lightbox-overlay img:hover {
+        transform: none;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      }
+
       @media (max-width: 760px) {
         main {
           padding: 36px 18px 52px;
@@ -284,6 +364,10 @@
         .project,
         .note {
           break-inside: avoid;
+        }
+
+        .lightbox-overlay {
+          display: none;
         }
       }
     </style>
@@ -353,6 +437,26 @@
             
           </div>
         </section>
+      
+
+      
+        <nav class="toc" aria-label="Table of contents">
+          <h2>In This Portfolio</h2>
+          <ul>
+            
+              <li><a href="#section-0">Current and Emerging Work</a></li>
+            
+              <li><a href="#section-1">Artifacts / Epic Games</a></li>
+            
+              <li><a href="#section-2">Artifacts / Insight</a></li>
+            
+              <li><a href="#section-3">Artifacts / Early Career</a></li>
+            
+            
+              <li><a href="#tech-stack-heading">Tech Stack</a></li>
+            
+          </ul>
+        </nav>
       
 
       
@@ -471,7 +575,11 @@
 
 <p>I partnered across SDK, mobile, web, backend, SDET, QA, security, and product concerns to define safer integration paths, produce RFCs and system diagrams, surface brittle cross-layer behavior, and guide refactoring priorities toward simpler, more maintainable solutions.</p>
 
-<p>This period included cross-stack integration planning for Epic Online Services features, mobile-specific release-risk review, privacy declaration updates for embedded web features, production incident response, Grafana-backed observability work, and release triage when complex bugs surfaced late in the cycle. It also included designing and implementing a standards-based MFA/TOTP module, then adapting it quickly when cryptographic requirements changed late in the release cycle. That MFA work shipped in EGS Marketplace app variants and as a primary feature of the Epic Games App.</p>
+<p>This period included mobile-specific release-risk review, privacy declaration updates for embedded web features, production incident response, Grafana-backed observability work, and a standards-based MFA/TOTP module that shipped in EGS Marketplace app variants and as a primary feature of the Epic Games App.</p>
+
+<p>Leadership Highlight — Voice Chat Integration:</p>
+
+<p>Led cross-stack architecture and integration for the Voice Chat feature from the mobile perspective, serving as lead architect and mobile product owner on a critical product initiative that required coordination across web, backend, EOSSDK, and deep core layers. The work involved managing complex ownership boundaries between teams and end-to-end integration across the KMP core Kotlin layer, native iOS and Android platform layers, web components, and backend services.</p>
 
 <p>Leadership focus:</p>
 
@@ -1322,10 +1430,22 @@
   <li>XCTest, mock dependency injection, Xcode Instruments, Sentry, Crashlytics, Grafana, Splunk, LaunchDarkly, Charles Proxy, Postman, Jenkins, GitHub Actions, CircleCI, Xcodebuild tooling, Horde/Swarm, YAML, JSON, XML build graphs, and production monitoring.</li>
 </ul>
 
+<p>AI &amp; GenAI:</p>
+
+<ul>
+  <li>Claude Code, Cursor, Human in the Loop Design, SDLC integration, agents, skills, MCPs, hooks, LangChain, and n8n.</li>
+</ul>
+
 <p>Web, backend, cloud, and automation:</p>
 
 <ul>
-  <li>React.js, Sails.js, Express.js, JavaScript, Python, AWS technologies, GCP, Google App Engine, Google Endpoints, Firebase Realtime Database, Firebase Authentication, Firebase Storage, Firebase Functions, Slack integrations, proprietary REST APIs, web services, LangChain, n8n, agents, skills, MCPs, and hooks.</li>
+  <li>React.js, Sails.js, Express.js, JavaScript, Python, AWS technologies, GCP, Google App Engine, Google Endpoints, Firebase Realtime Database, Firebase Authentication, Firebase Storage, Firebase Functions, Slack integrations, proprietary REST APIs, and web services.</li>
+</ul>
+
+<p>Working knowledge and broader exposure:</p>
+
+<ul>
+  <li>Unreal Engine C++, C#, Kubernetes (EKS), MySQL, PostgreSQL, Spark, Ethereum, IoT, Raspberry Pi, Google Glass, Angular, Vue.js, Spring Boot, .NET/ASP.NET, Ruby, TypeScript, MS SQL Server, TeamCity, and Fabric Answers.</li>
 </ul>
           </div>
         </section>
@@ -1345,5 +1465,30 @@
         
       </footer>
     </main>
+    <script>
+      (function() {
+        var overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        var lbImg = document.createElement('img');
+        overlay.appendChild(lbImg);
+        document.body.appendChild(overlay);
+
+        document.querySelectorAll('main img').forEach(function(img) {
+          img.addEventListener('click', function() {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt;
+            overlay.classList.add('active');
+          });
+        });
+
+        overlay.addEventListener('click', function() {
+          overlay.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') overlay.classList.remove('active');
+        });
+      })();
+    </script>
   </body>
 </html>
