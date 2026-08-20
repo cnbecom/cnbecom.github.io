@@ -3,7 +3,7 @@ logo: /assets/img/avatar.jpeg
 description: Engineering and Mobile Product Leader
 theme: jekyll-theme-minimal
 show_downloads: false
-show_twitter: true
+show_twitter: false
 show_linkedin: true
 show_angelco: false
 show_stackoverflow: false
