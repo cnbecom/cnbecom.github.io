@@ -10,10 +10,6 @@ I help teams turn ambiguous product ideas into shippable mobile and platform wor
 
 **Technical Depth** — Native mobile architecture, platform integration, API boundaries, observability, testing, and release quality.
 
-[View Application Portfolio](./portfolio/b57e9817-dba2-4f96-977f-595098792068/)
-
-This public homepage is intentionally concise. A detailed portfolio, private materials, and a PDF version can be shared directly for interview conversations.
-
 Feel free to email me at cnbecom (at) gmail (dot) com.
 
 ----
