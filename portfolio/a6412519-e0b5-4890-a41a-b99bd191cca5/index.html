@@ -373,7 +373,7 @@
             
               <div class="summary">
                 <h2>Delivery</h2>
-                <p>Turning ambiguous goals into reviewable increments: launch paths, release readiness, measurable outcomes, and cross-functional execution.</p>
+                <p>Launch paths, release readiness, measurable outcomes, and clear ownership and decision rights across the teams that have to ship together.</p>
               </div>
             
               <div class="summary">
@@ -393,7 +393,7 @@
           <div class="prose">
             <p>I am a Product Engineering Leader with twelve years building native mobile and platform software, spanning product discovery, workflow design, launch scope, release quality, and the architecture underneath all of it.</p>
 
-<p>This portfolio is organized around the work hiring teams need to evaluate quickly: how an ambiguous idea becomes a scoped product bet, how that bet becomes a shippable system with measurable outcomes, and how technical depth keeps the tradeoffs along the way honest rather than theoretical.</p>
+<p>This portfolio is organized around the work hiring teams need to evaluate quickly: how an ambiguous idea becomes a scoped product bet, how that bet becomes a shippable system with measurable outcomes, and how technical depth keeps the tradeoffs along the way honest rather than theoretical. On cross-functional work it is also organized around where the risk actually lives: the ownership boundaries between teams, and who gets to decide.</p>
           </div>
         </section>
       
@@ -407,12 +407,12 @@
             
               <div class="detail">
                 <h2>Problem Framing</h2>
-                <p>I start from the customer problem and the constraint, not the feature request. My background in behavioral sciences and education is the real leverage here: it shapes how I read user behavior, separate what people say from what they do, and turn a vague goal into a problem statement a team can build against. I write the tradeoffs down — customer value, implementation cost, operational trust — so a decision stays reviewable instead of being remembered differently by everyone a month later.</p>
+                <p>I start from the customer problem and the constraint, not the feature request. My background in behavioral sciences and education is the real leverage here: it shapes how I read user behavior, separate what people say from what they do, and turn a vague goal into a problem statement a team can build against. I write the tradeoffs down — customer value, implementation cost, operational trust — along with what we are choosing not to do, so a decision stays reviewable instead of being remembered differently by everyone a month later.</p>
               </div>
             
               <div class="detail">
-                <h2>Launch and Delivery</h2>
-                <p>I scope launches as reviewable increments with an explicit quality bar, then drive them across the functions that have to agree. I have owned release readiness on consumer apps with large audiences, which is why I treat instrumentation, observability, and rollback paths as product requirements rather than engineering overhead. I define the KPIs before launch, build the dashboards that watch them, and use that data to decide what ships next.</p>
+                <h2>Launch and Ownership</h2>
+                <p>I scope launches as reviewable increments with an explicit quality bar, then drive them across the functions that have to agree — while keeping clear who actually decides. On cross-stack work the product risk usually sits in the boundaries between teams rather than inside any one of them, so I name those boundaries early and own the integration path across them. I define the KPIs before launch and build the dashboards that watch them, and I treat instrumentation, observability, and rollback paths as product requirements rather than engineering overhead.</p>
               </div>
             
               <div class="detail">
@@ -496,7 +496,7 @@
 <p>Product judgment:</p>
 
 <ul>
-  <li>Defined the product as short turn-based matches with a model-backed opponent, then scoped the first release to iOS so one platform could feel finished rather than two feeling thin.</li>
+  <li>Defined the product as short turn-based matches with a model-backed opponent, then scoped the first release to iOS so one platform could feel finished rather than two feeling thin. The accepted cost is a later Android launch, which the shared core is built to absorb.</li>
   <li>Made a deliberate call about where AI belongs in the product: in the match loop as differentiated gameplay, not as a chat surface, and not as delivery tooling inside the shipped runtime.</li>
   <li>Protected the Android launch path through shared-core decisions locked early, while keeping dedicated native UI on each platform instead of accepting a lowest-common-denominator interface.</li>
   <li>Drove the work toward a store-ready release: release preparation, QA, store packaging, and production-readiness review.</li>
@@ -524,7 +524,7 @@
 <p>Product judgment:</p>
 
 <ul>
-  <li>Started from a product requirement rather than a model capability: generated output has to stay grounded in the user’s own source material, or the feature is not trustworthy enough to ship.</li>
+  <li>Started from a product requirement rather than a model capability: generated output has to stay grounded in the user’s own source material, or the feature is not trustworthy enough to ship. That trades away raw model range — the product declines answers it cannot ground — on the judgment that an untrustworthy answer costs more than a missing one.</li>
   <li>Turned that requirement into an architectural boundary, with context assembly, session state, and grounding checks owned by the shared core so no client can accept ungrounded output on its own.</li>
   <li>Specified the failure behavior as part of the product rather than an afterthought: inference timeout, retry, and fallback paths that keep the workflow usable when the model is slow or wrong.</li>
   <li>Kept product runtime AI separate from AI delivery tooling, in both the architecture and the story told about it.</li>
@@ -569,7 +569,8 @@
 
 <ul>
   <li>Served as mobile product owner and lead architect for Voice Chat, a cross-stack initiative spanning the KMP core, native iOS and Android layers, web components, backend services, and EOSSDK, where most of the product risk sat in ownership boundaries between teams rather than in any single layer.</li>
-  <li>Determined product and engineering KPIs, built the Grafana dashboards that watched them, and used that data to set team priorities and judge release risk during launches.</li>
+  <li>Reframed a Social Overlay engagement problem with instrumentation rather than opinion. The working assumption was that users did not want the feature; render-time telemetry — cold versus warm load, percentile distribution, and network type — showed a cold-load-dominated profile with a heavy tail, which pointed at performance rather than desirability. That read redirected the work to the overlay’s load path.</li>
+  <li>Determined the product and engineering KPIs behind those dashboards, and used them to set team priorities and judge release risk during launches.</li>
   <li>Treated release-risk review, privacy declarations for embedded web features, and incident response as product requirements for a consumer app operating at scale.</li>
   <li>Shipped standards-based MFA/TOTP as a primary feature of the Epic Games App and across EGS Marketplace app variants.</li>
 </ul>
@@ -667,7 +668,7 @@
 
 <ul>
   <li>Defined what mobile parity actually meant for a developer-facing SDK, moving it off API coverage and onto what partners actually hit: lifecycle, threading, networking reliability, OS version changes, embedded web views, and release validation.</li>
-  <li>Treated partner onboarding friction as a product signal, and built mobile sample applications that served as internal end-to-end harnesses and external reference implementations at the same time.</li>
+  <li>Mobile adoption of the SDK was not large at the time, and partner onboarding friction was the lever I could actually move: I built mobile sample applications, proof-of-concept integrations, and documentation that worked as internal end-to-end harnesses and external reference implementations at once, so the mobile path was something partners could copy rather than reverse-engineer.</li>
   <li>Argued mobile into being a first-class platform concern against desktop and console assumptions, translating those constraints into concrete release and validation work rather than abstract objections.</li>
   <li>Supported the SDK’s Epic payment flows on mobile: checkout, payment-method handling, creator tags, and the native/web boundaries those purchases depend on.</li>
 </ul>
@@ -786,7 +787,7 @@
 
 <ul>
   <li>Took an open strategic question — how the Epic Games Store should show up on iOS from a largely Android-first footprint, during an active App Store dispute — and turned it into a scoped delivery plan.</li>
-  <li>Chose to wrap the existing storefront in native application infrastructure rather than rebuild it, trading long-term native polish for a release candidate inside roughly five months.</li>
+  <li>Chose to wrap the existing storefront in native application infrastructure rather than rebuild it, trading long-term native polish for a release candidate inside roughly five months. Rebuilding natively was the better long-term product and the wrong call for the window we actually had.</li>
   <li>Ran leadership demos as explicit go/no-go decision points so stakeholders could judge progress while legal and platform constraints shifted outside the team’s control.</li>
   <li>Delivered the intended release candidate, ready for Apple review pending legal and executive approval, and left a practical foundation for later EGS Marketplace work.</li>
 </ul>
@@ -855,7 +856,7 @@
 
 <ul>
   <li>Shipped Marketing Splash in roughly four weeks: a production-managed surface that let non-engineers update in-app event messaging independently, taking engineering out of the critical path for time-sensitive communication.</li>
-  <li>Treated product instrumentation as a first-class concern during a 10x growth surge, pairing LaunchDarkly A/B testing and rollout control with internal metrics and Grafana dashboards for user behavior, feature performance, and release risk.</li>
+  <li>Treated the engagement question as a measured bet rather than an argument: feature work shipped behind LaunchDarkly flags and A/B tests, with internal metrics and Grafana dashboards watching user behavior and feature performance, and the rollout widened or held on what that data showed. Under a 10x user surge that same read doubled as the release-risk signal.</li>
   <li>Supported UNO, one of the application’s most ambitious engagement initiatives, coordinating the iOS path with web and Android leads and a partner organization.</li>
   <li>Entered a moving product organization under real production pressure and aimed contributions where delivery risk was highest.</li>
 </ul>
@@ -947,7 +948,7 @@
         <section aria-labelledby="section-2">
           <div class="section-title">
             <h2 id="section-2">Artifacts / Insight</h2>
-            <span>3 projects</span>
+            <span>2 projects</span>
           </div>
           
           <div class="projects">
@@ -1038,32 +1039,6 @@
                       </figure>
                     
                   </div>
-                
-              </article>
-            
-              <article class="project">
-                <h2>Clarifye / Family Dollar</h2>
-                
-                  <div class="prose"><p>I stepped into active development on two additional client projects and helped keep work moving despite midstream handoffs and competing delivery needs.</p>
-
-<p>For Clarifye, an enterprise application in the eyewear space, I implemented feature updates and addressed breaking changes to an app extension service caused by iOS 11. For Family Dollar, I stepped in during an extended staffing gap and contributed while continuing to support my existing client obligations.</p>
-
-<p>Product judgment:</p>
-
-<ul>
-  <li>Held delivery commitments across concurrent engagements, entering active projects midstream and scoping contributions to what each one actually needed.</li>
-  <li>Absorbed an iOS 11 platform change that broke an app-extension service, treating OS compatibility as a delivery risk to be scheduled rather than a surprise to be absorbed.</li>
-  <li>Covered an extended staffing gap as interim technical lead without dropping existing obligations.</li>
-</ul>
-
-<p>Product and technical focus:</p>
-
-<ul>
-  <li>Supported enterprise mobile workflows and iOS platform compatibility work.</li>
-  <li>Addressed app-extension breakage and feature updates under UAT pressure.</li>
-</ul></div>
-                
-                
                 
               </article>
             
