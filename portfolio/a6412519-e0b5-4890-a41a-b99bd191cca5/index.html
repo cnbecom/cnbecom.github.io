@@ -373,7 +373,7 @@
             
               <div class="summary">
                 <h2>Delivery</h2>
-                <p>Launch paths, release readiness, measurable outcomes, and clear ownership and decision rights across the teams that have to ship together.</p>
+                <p>Launch paths, release readiness, and clear ownership and decision rights across the teams that have to ship together.</p>
               </div>
             
               <div class="summary">
@@ -393,7 +393,7 @@
           <div class="prose">
             <p>I am a Product Engineering Leader with twelve years building native mobile and platform software, spanning product discovery, workflow design, launch scope, release quality, and the architecture underneath all of it.</p>
 
-<p>This portfolio is organized around the work hiring teams need to evaluate quickly: how an ambiguous idea becomes a scoped product bet, how that bet becomes a shippable system with measurable outcomes, and how technical depth keeps the tradeoffs along the way honest rather than theoretical. On cross-functional work it is also organized around where the risk actually lives: the ownership boundaries between teams, and who gets to decide.</p>
+<p>This portfolio is organized around the work hiring teams need to evaluate quickly: how an ambiguous idea becomes a scoped product bet, how that bet becomes a shippable system, and how technical depth keeps the tradeoffs along the way honest rather than theoretical. On cross-functional work it is also organized around where the risk actually lives: the ownership boundaries between teams, and who gets to decide.</p>
           </div>
         </section>
       
@@ -412,7 +412,7 @@
             
               <div class="detail">
                 <h2>Launch and Ownership</h2>
-                <p>I scope launches as reviewable increments with an explicit quality bar, then drive them across the functions that have to agree — while keeping clear who actually decides. On cross-stack work the product risk usually sits in the boundaries between teams rather than inside any one of them, so I name those boundaries early and own the integration path across them. I define the KPIs before launch and build the dashboards that watch them, and I treat instrumentation, observability, and rollback paths as product requirements rather than engineering overhead.</p>
+                <p>I scope launches as reviewable increments with an explicit quality bar, then drive them across the functions that have to agree — while keeping clear who actually decides. On cross-stack work the product risk usually sits in the boundaries between teams rather than inside any one of them, so I name those boundaries early and own the integration path across them. Where behavior could change the call, I have defined the KPIs and used them to redirect the work. I treat that instrumentation, the observability around it, and a rollback path as product requirements.</p>
               </div>
             
               <div class="detail">
@@ -453,7 +453,7 @@
           </div>
           
             <div class="section-intro">
-              <p>OpenForm Studio, LLC is the organizing identity for current independent consulting, app development, AI tooling, workflow automation, and product experimentation.</p>
+              <p>OpenForm Studio, LLC is the studio for current product framing, app development, AI tooling, and product experiments. The work in this section is in progress: scope decisions and systems under construction.</p>
             </div>
           
           <div class="projects">
@@ -470,7 +470,7 @@
 <ul>
   <li>Framed the problem before the solution: the nonprofit was coordinating bookings through group messages and a spreadsheet, so the real failure mode was not a missing calendar but unclear ownership of who had confirmed what.</li>
   <li>Defined participant roles, administrative oversight, and notification workflows as the product surface, then pushed the scheduling rules into the API so a client could not bypass them.</li>
-  <li>Chose web-first delivery against a native-ready API contract: a scope decision that gets the nonprofit a working product now without foreclosing native clients later.</li>
+  <li>Chose web-first delivery against a native-ready API contract, so the scheduling workflow can be built and reviewed before a native client exists, with native clients still available later.</li>
   <li>Worked from booking failures observed with the operator rather than designing against a generic calendar abstraction.</li>
 </ul>
 
@@ -487,9 +487,9 @@
               <article class="project">
                 <h2>Turn-Based Mobile Game</h2>
                 
-                  <div class="prose"><p>Turn-Based Mobile Game is production-bound OpenForm Studio mobile game work in the Dots and Boxes family, planned first for iOS with Android following on the same shared core. The product direction combines short turn-based matches, native mobile UX, and a model-backed match loop where structured board state is encoded for an LLM to validate human turns and generate the computer’s next move.</p>
+                  <div class="prose"><p>Turn-Based Mobile Game is in-progress OpenForm Studio work on a mobile game in the Dots and Boxes family. The product is short turn-based matches with a model-backed opponent. The first release is scoped to iOS so one platform can feel finished. The accepted cost is a later Android launch, which the shared core is built to absorb.</p>
 
-<p>The work emphasizes product definition, cross-platform delivery judgment, and mobile architecture choices that keep the game portable without flattening it into a lowest-common-denominator UI. UIKit and SwiftUI shape the first iOS client, Kotlin Multiplatform owns shared match state, matrix encoding, model adapter boundaries, and apply-after-accept behavior, and dedicated Compose screens remain the Android path.</p>
+<p>UIKit and SwiftUI are the iOS client. Kotlin Multiplatform holds shared match state, matrix encoding, model adapter boundaries, and apply-after-accept behavior. Dedicated Compose screens remain the Android path.</p>
 
 <p>Public repository: <a href="https://github.com/cnbecom/turn-based-mobile-game">Turn-Based Mobile Game</a></p>
 
@@ -499,13 +499,13 @@
   <li>Defined the product as short turn-based matches with a model-backed opponent, then scoped the first release to iOS so one platform could feel finished rather than two feeling thin. The accepted cost is a later Android launch, which the shared core is built to absorb.</li>
   <li>Made a deliberate call about where AI belongs in the product: in the match loop as differentiated gameplay, not as a chat surface, and not as delivery tooling inside the shipped runtime.</li>
   <li>Protected the Android launch path through shared-core decisions locked early, while keeping dedicated native UI on each platform instead of accepting a lowest-common-denominator interface.</li>
-  <li>Drove the work toward a store-ready release: release preparation, QA, store packaging, and production-readiness review.</li>
+  <li>Set the near-term bar at a playable iOS match.</li>
 </ul>
 
 <p>Product and technical focus:</p>
 
 <ul>
-  <li>iOS first with UIKit and SwiftUI, Android follow-on with Kotlin and Jetpack Compose, Kotlin Multiplatform shared core, matrix-based match encoding, model-backed turn validation and opponent moves, fake-model testing, inference timeout/error handling, release preparation, QA, store packaging, and production-readiness review.</li>
+  <li>iOS first with UIKit and SwiftUI, Android follow-on with Kotlin and Jetpack Compose, Kotlin Multiplatform shared core, matrix-based match encoding, model-backed turn validation and opponent moves, fake-model testing, and inference timeout/error handling.</li>
 </ul></div>
                 
                 
@@ -515,9 +515,9 @@
               <article class="project">
                 <h2>Context-Aware AI Integration</h2>
                 
-                  <div class="prose"><p>Context-Aware AI Integration is production-bound OpenForm Studio native app work that integrates a language model with structured local context so generated output stays grounded in source material. The product direction emphasizes useful AI behavior inside a real mobile workflow, not a generic chatbot surface or a prompt assembled separately by each client.</p>
+                  <div class="prose"><p>Context-Aware AI Integration is in-progress OpenForm Studio work. The product requirement is that generated output stays grounded in the user’s own source material. That trades away raw model range: the product declines answers it cannot ground, on the judgment that an untrustworthy answer costs more than a missing one. The direction is useful AI inside a real mobile workflow.</p>
 
-<p>The work uses an iOS-first path with UIKit and SwiftUI, while keeping Android aligned through a Kotlin Multiplatform shared core and dedicated Compose UI. The shared module owns context assembly, session state, model adapter boundaries, and grounding checks so neither platform UI owns prompt construction, vendor response parsing, or acceptance of ungrounded output.</p>
+<p>The intended shape is an iOS-first path with UIKit and SwiftUI, with Android later on a Kotlin Multiplatform shared core and dedicated Compose UI. Context assembly, session state, model adapter boundaries, and grounding checks belong on that shared core, so a client does not own prompt construction or acceptance of ungrounded output.</p>
 
 <p>Public repository: <a href="https://github.com/cnbecom/context-aware-ai-integration">Context-Aware AI Integration</a></p>
 
@@ -525,15 +525,15 @@
 
 <ul>
   <li>Started from a product requirement rather than a model capability: generated output has to stay grounded in the user’s own source material, or the feature is not trustworthy enough to ship. That trades away raw model range — the product declines answers it cannot ground — on the judgment that an untrustworthy answer costs more than a missing one.</li>
-  <li>Turned that requirement into an architectural boundary, with context assembly, session state, and grounding checks owned by the shared core so no client can accept ungrounded output on its own.</li>
-  <li>Specified the failure behavior as part of the product rather than an afterthought: inference timeout, retry, and fallback paths that keep the workflow usable when the model is slow or wrong.</li>
+  <li>The boundary that requirement calls for: context assembly, session state, and grounding checks on the shared core, so no client can accept ungrounded output on its own.</li>
+  <li>Failure behavior is part of the product direction: inference timeout, retry, and fallback paths that keep the workflow usable when the model is slow or wrong.</li>
   <li>Kept product runtime AI separate from AI delivery tooling, in both the architecture and the story told about it.</li>
 </ul>
 
 <p>Product and technical focus:</p>
 
 <ul>
-  <li>iOS first with UIKit and SwiftUI, Android follow-on with Kotlin and Jetpack Compose, Kotlin Multiplatform shared core, structured local context, model adapter boundaries, grounding checks, inference timeout/retry/fallback behavior, release preparation, QA, store packaging, and production-readiness review.</li>
+  <li>iOS first with UIKit and SwiftUI, Android follow-on with Kotlin and Jetpack Compose, Kotlin Multiplatform shared core, structured local context, model adapter boundaries, grounding checks, and inference timeout/retry/fallback behavior.</li>
 </ul></div>
                 
                 
@@ -551,7 +551,7 @@
           </div>
           
             <div class="section-intro">
-              <p>I worked at Epic Games for nearly seven years across multiple teams, products, and hiring contexts. That arc began with building the company’s first dedicated native iOS team around an Authenticator app for iOS and Android, continued through Houseparty during a major growth surge, expanded into building a team to produce a native Epic Games Store iOS client during the Apple litigation, shifted to mobile platform stewardship for Epic Online Services SDK, and most recently included Kotlin Multiplatform work across the Epic Games App and EGS Marketplace.</p>
+              <p>I worked at Epic Games for nearly seven years on mobile and platform products. That arc began with an Authenticator app for iOS and Android, continued through Houseparty during a major growth surge, then a native Epic Games Store iOS client during the Apple litigation, then mobile platform stewardship for Epic Online Services SDK, and most recently Kotlin Multiplatform work across the Epic Games App and EGS Marketplace.</p>
             </div>
           
           <div class="projects">
@@ -569,8 +569,7 @@
 
 <ul>
   <li>Served as mobile product owner and lead architect for Voice Chat, a cross-stack initiative spanning the KMP core, native iOS and Android layers, web components, backend services, and EOSSDK, where most of the product risk sat in ownership boundaries between teams rather than in any single layer.</li>
-  <li>Reframed a Social Overlay engagement problem with instrumentation rather than opinion. The working assumption was that users did not want the feature; render-time telemetry — cold versus warm load, percentile distribution, and network type — showed a cold-load-dominated profile with a heavy tail, which pointed at performance rather than desirability. That read redirected the work to the overlay’s load path.</li>
-  <li>Determined the product and engineering KPIs behind those dashboards, and used them to set team priorities and judge release risk during launches.</li>
+  <li>Defined the Social Overlay KPIs around render time: cold versus warm load, percentile distribution, and network type. The working assumption was that users did not want the feature. The profile was cold-load-dominated with a heavy tail, which pointed at performance rather than desirability and redirected the work to the overlay’s load path.</li>
   <li>Treated release-risk review, privacy declarations for embedded web features, and incident response as product requirements for a consumer app operating at scale.</li>
   <li>Shipped standards-based MFA/TOTP as a primary feature of the Epic Games App and across EGS Marketplace app variants.</li>
 </ul>
@@ -777,11 +776,13 @@
               <article class="project">
                 <h2>Epic Games Store iOS, Litigation Period</h2>
                 
-                  <div class="prose"><p>After Houseparty, I was called to build a team and produce a native iOS Epic Games Store client during active litigation between Epic and Apple over iOS App Store distribution and in-app payment rules. See <a href="https://en.wikipedia.org/wiki/Epic_Games_v._Apple">Epic Games v. Apple</a> and the <a href="https://www.courtlistener.com/docket/17442392/epic-games-inc-v-apple-inc/">CourtListener docket</a>.</p>
+                  <div class="prose"><p>The open question was how the Epic Games Store should show up on iOS from a largely Android-first footprint, during an active App Store dispute. The call was to wrap the existing storefront in native application infrastructure and target a release candidate in roughly five months. A full native rebuild remained the better long-term product, and the wrong call for that window.</p>
+
+<p>After Houseparty, the work was a native iOS Epic Games Store client during active litigation between Epic and Apple over iOS App Store distribution and in-app payment rules. See <a href="https://en.wikipedia.org/wiki/Epic_Games_v._Apple">Epic Games v. Apple</a> and the <a href="https://www.courtlistener.com/docket/17442392/epic-games-inc-v-apple-inc/">CourtListener docket</a>.</p>
 
 <p>The iOS client wrapped the Epic Games Store in native application infrastructure, with authorization and user context passed through web bridges and native delegates. That architecture let us move quickly while still respecting mobile expectations around authentication, session handling, app lifecycle, privacy declarations, and App Store submission readiness.</p>
 
-<p>Within roughly five months, the team produced a release candidate that was ready for Apple review, pending legal and executive approval. The project ultimately could not move through the normal developer-account path because of the ongoing dispute, but the team delivered the intended release candidate and created a practical foundation for later EGS Marketplace work.</p>
+<p>Within roughly five months, that work reached a release candidate ready for Apple review, pending legal and executive approval. It could not move through the normal developer-account path because of the ongoing dispute. The release candidate was delivered, and it left a practical foundation for later EGS Marketplace work.</p>
 
 <p>Product judgment:</p>
 
@@ -842,13 +843,15 @@
               <article class="project">
                 <h2>Houseparty</h2>
                 
-                  <div class="prose"><p>Houseparty was a high-scale social video application that became a major product priority during the onset of COVID-19, when daily active users surged from roughly 3 million to more than 30 million. After the Authenticator work, my team was assigned to Houseparty so we could help an already-moving organization absorb demand, deliver new engagement surfaces, and support rapid feature development.</p>
+                  <div class="prose"><p>The product bet under the demand surge was engagement production could change on its own: a marketing surface updated without waiting on an engineering release, and feature work shipped behind flags, A/B tests, and behavior dashboards.</p>
 
-<p>My team entered an existing product and engineering environment, learned enough of the system to contribute quickly, and delivered work that crossed production tooling, backend support, mobile UI, and release coordination.</p>
+<p>Houseparty was a high-scale social video application that became a major product priority during the onset of COVID-19, when daily active users surged from roughly 3 million to more than 30 million. The product need was to absorb that demand, ship new engagement surfaces, and keep feature development moving.</p>
+
+<p>I entered an existing product, learned enough of the system to contribute quickly, and worked across production tooling, backend support, mobile UI, and release coordination.</p>
 
 <p>Our first initiative was Marketing Splash, a dynamic marketing surface that production could update independently to guide users toward current and upcoming in-app events. The feature shipped in roughly four weeks, including backend updates, build-server and script changes, mobile-client UI work, and app architecture updates.</p>
 
-<p>After that, we collaborated with Houseparty engineering leads on UNO, one of the application’s most ambitious game initiatives. I helped lead the effort around iOS support and cross-functional coordination while working with web and Android leads. During the same period, I moved onto Android work where the team needed additional support, contributing to the Reactions feature while ramping on Kotlin, Java, and Android practices.</p>
+<p>After that, work with Houseparty engineering leads turned to UNO, one of the application’s most ambitious game initiatives. I took the iOS path and coordinated with web and Android leads. During the same period I contributed the Android Reactions feature, ramping on Kotlin, Java, and Android practices.</p>
 
 <p>Houseparty also strengthened my product instrumentation and rollout experience. Feature work used LaunchDarkly for A/B testing and rollout control, paired with internal metrics and Grafana dashboards to understand user behavior, application health, feature performance, and release risk during a high-velocity period.</p>
 
@@ -856,7 +859,7 @@
 
 <ul>
   <li>Shipped Marketing Splash in roughly four weeks: a production-managed surface that let non-engineers update in-app event messaging independently, taking engineering out of the critical path for time-sensitive communication.</li>
-  <li>Treated the engagement question as a measured bet rather than an argument: feature work shipped behind LaunchDarkly flags and A/B tests, with internal metrics and Grafana dashboards watching user behavior and feature performance, and the rollout widened or held on what that data showed. Under a 10x user surge that same read doubled as the release-risk signal.</li>
+  <li>Feature work shipped behind LaunchDarkly flags and A/B tests, with internal metrics and Grafana dashboards on user behavior and feature performance, during a surge from roughly 3 million to more than 30 million daily active users.</li>
   <li>Supported UNO, one of the application’s most ambitious engagement initiatives, coordinating the iOS path with web and Android leads and a partner organization.</li>
   <li>Entered a moving product organization under real production pressure and aimed contributions where delivery risk was highest.</li>
 </ul>
@@ -896,11 +899,18 @@
               <article class="project">
                 <h2>Epic Games Authenticator</h2>
                 
-                  <div class="prose"><p>I was hired by Epic with three initial objectives. The first was to build the company’s first dedicated native iOS team. The second was to enter Apple’s iOS App Store ecosystem with a native application. The third was to solve a highly visible customer problem.</p>
+                  <div class="prose"><p>The customer problem was account security that cost too much friction. The Authenticator was the bet Epic used to enter the App Store: a native iOS app with automatic 2FA at sign-up and login approval from the device, without fully launching the app, and without weakening account security. It was prepared for App Store submission and released as an internal beta, pending executive sign-off.</p>
 
-<p>The Authenticator was the product used to pursue those objectives. It was the first iOS mobile initiative I led after joining Epic. I hired engineers, structured the team across iOS, UX, production, QA, analytics, and backend contributors, and defined the working practices that became the foundation for all later Epic mobile work. The product gave us a focused surface for proving mobile delivery capability while addressing a customer-facing account-security need. It was built in Swift with native web components, with a product goal of reducing authentication friction without compromising account security. The sign-up flow supported automatic 2FA setup, and push notifications allowed users to respond to authentication requests from the device level without needing to fully launch the app.</p>
+<p>It was built in Swift with native web components. Years later, the same authentication bet shipped as MFA/TOTP inside EGS Marketplace app variants and the Epic Games App.</p>
 
-<p>The project was prepared for App Store submission pending executive sign-off and was released internally as a successful beta. The team was then assigned to Houseparty to support that product’s growth. The Authenticator work established team patterns, mobile architecture direction, QA expectations, and delivery muscle that carried into later Epic assignments. Years later, related MFA/TOTP work shipped inside EGS Marketplace app variants and the Epic Games App.</p>
+<p>Product judgment:</p>
+
+<ul>
+  <li>Chose that narrow security surface as the way into the App Store: automatic 2FA at sign-up, and push approval from the device.</li>
+  <li>Held the cryptographic bar fixed. The friction cut was approval without fully launching the app.</li>
+  <li>Treated executive sign-off as the launch gate and released an internal beta while that decision was open.</li>
+  <li>The same bet later shipped as MFA/TOTP in the Epic Games App and across EGS Marketplace app variants.</li>
+</ul>
 
 <p>Product and technical focus:</p>
 
@@ -956,11 +966,11 @@
               <article class="project">
                 <h2>TIAA-CREF</h2>
                 
-                  <div class="prose"><p>I began on a feature team focused on retirement and investment guidance, then was promoted within roughly 90 days into Release Manager and Team Lead responsibilities to stabilize delivery cycles and restore stakeholder trust.</p>
+                  <div class="prose"><p>The product problem was a consumer financial app whose release cycle stakeholders no longer trusted. The work was the path from a feature concept to estimated, groomed, shippable scope, and the release bar on the way out: defect triage, regression review, production investigation, and weekend validation during critical backend upgrades.</p>
 
-<p>I led an onshore and offshore iOS team of roughly eight engineers with embedded QA support. I owned sprint commitments, release readiness, branch merges, code-review standards, delivery coordination, defect triage, regression review, production issue investigation, and weekend validation during critical backend upgrades.</p>
+<p>I began on a feature team focused on retirement and investment guidance, then within roughly 90 days took on release readiness for that delivery cycle.</p>
 
-<p>As Team Lead, I partnered with product managers, UX, analytics, QA, Android leads, business stakeholders, and client leadership to turn feature concepts into estimated, planned, groomed, and delivered work.</p>
+<p>I partnered with product managers, UX, analytics, QA, Android, business stakeholders, and client leadership to turn feature concepts into estimated, planned, groomed, and delivered work.</p>
 
 <p>Product judgment:</p>
 
@@ -968,7 +978,6 @@
   <li>Partnered with product managers, UX, analytics, QA, and business stakeholders to turn feature concepts into estimated, groomed, delivered work, owning the translation step between stakeholder request and buildable scope.</li>
   <li>Guided financial-product workflows end to end: requirements and use cases, technical validation, UX finalization, development, QA, and integration into a mature consumer app.</li>
   <li>Owned release readiness for recurring releases of a consumer financial application, including defect triage, regression review, production investigation, and weekend validation during critical backend upgrades.</li>
-  <li>Restored stakeholder confidence in the delivery cycle, which was the actual problem behind the promotion into Release Manager within roughly 90 days.</li>
 </ul>
 
 <p>Product and technical focus:</p>
@@ -1075,7 +1084,7 @@
         <section aria-labelledby="section-3">
           <div class="section-title">
             <h2 id="section-3">Artifacts / Early Career</h2>
-            <span>7 projects</span>
+            <span>6 projects</span>
           </div>
           
           <div class="projects">
@@ -1122,16 +1131,7 @@
               <article class="project">
                 <h2>rSites</h2>
                 
-                  <div class="prose"><p>Another early OpenForm Studio partnership was with rSites on a location manager and data collection tool for farmworker aid organizations, designed to help teams plan, execute, and analyze visits to migrant labor camps and other sites where farmworkers live.</p>
-
-<p>I consulted with the creator beginning in 2019, helping improve the codebase, shape architecture, integrate backend capabilities, and deliver key features ahead of a spring beta with selected aid organizations. The application was later used in the field by a test group during the growing season, with longer-term plans for a revamped iOS client.</p>
-
-<p>Product and technical focus:</p>
-
-<ul>
-  <li>Improved mobile workflows for planning, field data collection, and operational follow-up.</li>
-  <li>Supported backend integration, codebase improvements, and iOS product direction.</li>
-</ul></div>
+                  <div class="prose"><p>A 2019 consulting engagement on a location manager and field-data tool for farmworker aid organizations. The cut was a spring beta with selected organizations, covering planning, collection, and follow-up for visits they were already making. A revamped iOS client stayed outside that beta.</p></div>
                 
                 
                 
@@ -1157,13 +1157,6 @@
 <ul>
   <li>Explored location-aware task management, retail events, and floor operations workflows.</li>
   <li>Used Core Bluetooth, iBeacons, custom calendar UI, Swift, and reusable view components.</li>
-</ul>
-
-<p>Selected files:</p>
-
-<ul>
-  <li><code>CalendarViewController.swift</code></li>
-  <li><code>YearMonthDayCollectionViewCell.swift</code></li>
 </ul></div>
                 
                 
@@ -1207,21 +1200,6 @@
               </article>
             
               <article class="project">
-                <h2>J.A.R.V.I.S.</h2>
-                
-                  <div class="prose"><p>J.A.R.V.I.S. was an internal IoT front-office concept developed between client projects. The application greeted and interacted with office visitors through a large touch screen and external speakers, using a Raspberry Pi, sensors, and Slack integration to connect visitor activity with employees.</p>
-
-<p>Product and technical focus:</p>
-
-<ul>
-  <li>Combined IoT hardware, sensors, Raspberry Pi, touch interaction, audio output, and Slack workflow integration.</li>
-</ul></div>
-                
-                
-                
-              </article>
-            
-              <article class="project">
                 <h2>MiraSDK</h2>
                 
                   <div class="prose"><p>MiraSDK was an iOS SDK for a targeted advertising platform that used background Bluetooth messages to proprietary IoT devices to trigger relevant content on enabled digital out-of-home screens.</p>
@@ -1246,16 +1224,7 @@
               <article class="project">
                 <h2>My Daily Rebus</h2>
                 
-                  <div class="prose"><p>My Daily Rebus was an independently built puzzle app centered on rebus puzzles, visual and textual brain-teasers that represent familiar words, phrases, or sayings.</p>
-
-<p>I architected, designed, implemented, released, and maintained the application, including Firebase integration, native Swift implementation, custom animations, app assets, and puzzle content.</p>
-
-<p>Product and technical focus:</p>
-
-<ul>
-  <li>Built a content-driven puzzle experience with native UI, custom animation, Firebase, Swift 4.1, and no third-party animation frameworks.</li>
-  <li>Prioritized maintainability, separation of concerns, and App Store readiness.</li>
-</ul></div>
+                  <div class="prose"><p>An independently built puzzle app, taken from idea through App Store release and maintenance. The product was a small content loop: rebus puzzles, a collection, and native motion, with Firebase behind it.</p></div>
                 
                 
                 
@@ -1292,15 +1261,7 @@
               <article class="project">
                 <h2>What&#39;s Around</h2>
                 
-                  <div class="prose"><p>What’s Around was an early Google Glass application that updated the Glass display with nearby landmarks and points of interest. As the user moved, destinations updated in real time with distance and, where available, Google Places review context.</p>
-
-<p>I managed the project, worked directly with Google on requirements, coordinated with a Java developer using Google App Engine and Endpoints, and handled much of the UI/UX and asset work. The application was the 74th Glass application released.</p>
-
-<p>Product and technical focus:</p>
-
-<ul>
-  <li>Explored wearable UX, location-aware recommendations, Google Places data, App Engine, Endpoints, UI/UX, and asset creation.</li>
-</ul></div>
+                  <div class="prose"><p>An early Google Glass application, the 74th released. As the wearer moved, nearby landmarks updated on the display with distance and, where available, Google Places review context.</p></div>
                 
                 
                 
@@ -1341,6 +1302,10 @@
 </ul>
 
 <p>Product and delivery:</p>
+
+<ul>
+  <li>Problem framing, launch-scope decisions, workflow and interface design, ownership and decision rights, release readiness, instrumentation and rollback paths used to make a launch call, and written tradeoffs a team can review later.</li>
+</ul>
 
 <p>Quality, observability, and tooling:</p>
 
